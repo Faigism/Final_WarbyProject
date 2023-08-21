@@ -1,0 +1,268 @@
+footer{
+    background-color: rgba(248, 248, 248, 1);
+    .ftrtopall{
+        .ftrtopcoll{
+            margin: 0px auto;
+            width: 100%;
+            .ftrtopcollall{
+                display: grid;
+                place-items: stretch;
+                align-items: center;
+                border-bottom: 1px solid rgba(255, 255, 230, 1);
+                .colltop{
+                    span{
+                        color: rgba(65, 75, 86, 1);
+                        h2{
+                            font-family: fairfontregular;
+                            font-weight: 400;
+                            letter-spacing: 0px;
+                        }
+                    }
+                }
+                .collbtm{
+                    form{
+                        display: grid;
+                        label{
+                            position: relative;
+                            display: inline-flex;
+                            height: 60px;
+                            width: 100%;
+                            background-color: rgba(255, 255, 255, 1);
+                            transition-property: border-color, margin-bottom;
+                            cursor: text;
+                            user-select: none;
+                            border: 1px solid rgba(255, 229, 230,1);
+                            border-radius: 12px;
+                            :hover{
+                                border-color: rgba(161, 164, 166, 1);
+                            }
+                            div{
+                                position: absolute;
+                                color: rgba(103, 111, 120, 1);
+                                top: 0px;
+                                bottom: 0px;
+                                left: 16px;
+                                right: 16px;
+                                transform: translate(0px, calc(50% - 11px)) scale(1);
+                                pointer-events: none;
+                                transform-origin: left top;
+                                span{
+                                    font-weight: 400;
+                                    letter-spacing: 0px;
+                                    color: rgba(103, 111, 120, 1);
+                                }
+                            }
+                            input{
+                                position: absolute;
+                                background-color: transparent;
+                                top: 28px;
+                                left: 16px;
+                                right: 16px;
+                                bottom: 10px;
+                                height: 22px;
+                                border: none;
+                                outline: none;
+                                :focus{
+                                    outline: none;
+                                }
+                            }
+                            button{
+                                appearance: none;
+                                border: none;
+                                border-radius: 8px;
+                                background-color: rgba(0, 110, 165, 1);
+                                margin: auto 0px;
+                                padding: 0px;
+                                position: absolute;
+                                color: rgba(255, 255, 255, 1);
+                                right: 8px;
+                                top: 8px;
+                                bottom: 8px;
+                                height: 44px;
+                                width: 44px;
+                                svg{
+                                    position: absolute;
+                                    inset: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .ftrcenterall{
+        margin: 0px auto;
+        width: 100%;
+        .ftrcentercoll{
+            place-items: stretch;
+            display: grid;
+            .collcenter{
+                div{
+                    span{
+                        font-size: 14px;
+                        line-height: 20px;
+                        font-weight: 600;
+                        letter-spacing: 0px;
+                    }
+                    ul{
+                        li{
+                            :hover{
+                                color: rgba(65, 75, 86, 1);
+                            }
+                            span{
+                                font-size: 14px;
+                                line-height: 20px;
+                                letter-spacing: 0px;
+                                font-weight: 400;
+                                a{
+                                    color: rgba(103, 111, 120, 1);
+                                    display: block;
+                                    margin-top: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .collcentercontact{
+                .collcenterli{
+                    .collcontact{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        span{
+                            font-size: 16px;
+                            font-weight: 600;
+                            letter-spacing: 0px;
+                            line-height: 22px;
+                        }
+                        div{
+                            color: rgba(103, 111, 120, 1);
+                            padding-top: 4px;
+                            p{
+                                font-size: 14px;
+                                font-weight: 400;
+                                letter-spacing: 0px;
+                                line-height: 24px;
+                            }
+                        }
+                        ul{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-wrap: wrap;
+                            gap: 20px 8px;
+                            li{
+                                :hover{
+                                    color: rgba(65, 75, 86, 1);
+                                }
+                                a{
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    color: rgba(103, 111, 120, 1);
+                                    gap: 8px;
+                                    .tel-icon{
+                                        width: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 8px;
+                                        div{
+                                            height: 24px;
+                                            width: 24px;
+                                        }
+                                    }
+                                    span{
+                                        font-size: 14px;
+                                        font-weight: 400;
+                                        letter-spacing: 0px;
+                                        line-height: 20px;
+                                        text-align: center;
+                                        min-width: 45px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footerbottom{
+        padding: 24px 0px;
+        .ftrbottomall{
+            margin: 0px auto;
+            width: 100%;
+            .ftrbottomcoll{
+                place-items: stretch;
+                display: grid;
+                .coll1{
+                    ul{
+                        display: flex;
+                        li{
+                            :hover{
+                                color: rgba(65, 75, 86, 1);
+                            }
+                            a{
+                                display: inline-block;
+                                padding: 5px 12px;
+                                color: rgba(103, 111, 120, 1);
+                                span{
+                                    font-size: 14px;
+                                    font-weight: 600;
+                                    letter-spacing: 0px;
+                                    line-height: 20px;
+                                }
+                            }
+                            .collbtmactive{
+                                border: 1px solid rgba(161, 164, 166, 1);
+                                border-radius: 100px;
+                            }
+                        }
+                    }
+                }
+                .coll2{
+                    ul{
+                        display: flex;
+                        align-items: center;
+                        gap: 16px;
+                        height: 100%;
+                        li{
+                            :hover{
+                                color: rgba(0, 88, 141, 1);
+                            }
+                            display: inline-flex;
+                            a{
+                                color: rgba(103, 111, 120, 1);
+                                display: inline-flex;
+                            }
+                        }
+                    }
+                }
+                .coll3{
+                    ul{
+                        gap: 16px;
+                        li{
+                            :hover{
+                                color: rgba(65, 75, 86, 1);
+                            }
+                            a{
+                                color: rgba(103, 111, 120, 1);
+                                span{
+                                    font-size: 12px;
+                                    font-weight: 400;
+                                    letter-spacing: 0px;
+                                    line-height: 18px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
