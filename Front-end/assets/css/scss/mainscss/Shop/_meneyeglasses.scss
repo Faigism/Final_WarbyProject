@@ -1,0 +1,506 @@
+.menseyeglasses{
+    position: relative;
+    flex: 1 0 auto;
+    .eyetop{
+        background: rgba(255, 255, 255, 1);
+        width: 100%;
+        position: relative;
+        .eyetop2{
+            margin: 0px auto;
+            width: 100%;
+            .eyetopcoll{
+                place-items: stretch;
+                display: grid;
+                .eyetopcoll2{
+                    .eyecontent{
+                        .eyecontent2{
+                            text-align: center;
+                            display: flex;
+                            justify-content: center;
+                            div{
+                                color: rgba(65, 75, 86, 1);
+                                h1{
+                                    font-weight: 400;
+                                    letter-spacing: 0px;
+                                    font-family: fairfontregular;
+                                }
+                            }
+                        }
+                    }
+                    .eyetitle{
+                        width: 100%;
+                        border-radius: 12px;
+                        position: relative;
+                        overflow: hidden;
+                        .eyetitlelink{
+                            a{
+                                position: absolute;
+                                inset: 0px;
+                                z-index: 1;
+                            }
+                        }
+                    }
+                    .eyecentertext{
+                        margin: 0px auto;
+                        .centertext{
+                            position: absolute;
+                            inset: 0;
+                            place-items: stretch;
+                            display: grid;
+                            .centertext2{
+                                .textall{
+                                    align-items: start;
+                                    display: flex;
+                                    flex-direction: column;
+                                    width: 100%;
+                                    .texttop{
+                                        div{
+                                            color: rgba(65, 75, 86, 1);
+                                            h1{
+                                                font-size: 40px;
+                                                font-weight: 400;
+                                                letter-spacing: 0px;
+                                                line-height: 46px;
+                                                font-family: fairfontregular;
+                                            }
+                                        }
+                                    }
+                                    .textcenter{
+                                        color: rgba(65, 75, 86, 1);
+                                        p{
+                                            font-weight: 400;
+                                            letter-spacing: 0px;
+                                        }
+                                    }
+                                    a{
+                                        color: rgba(65, 75, 86, 1);
+                                        background: transparent;
+                                        display: inline-flex;
+                                        align-items: center;
+                                        border: none;
+                                        border-radius: 4px;
+                                        padding: 0;
+                                        transition: 0.2s cubic-bezier(0.25, 0, 0.35, 0.95);
+                                        span{
+                                            font-weight: 600;
+                                            letter-spacing: 0px;
+                                        }
+                                        div{
+                                            padding-left: 4px;
+                                            padding-top: 3px;
+                                            display: inline-flex;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .eyecategory{
+        padding: 24px 0;
+        .category{
+            text-align: center;
+            overflow-x: auto;
+            .category2{
+                display: inline-block;
+                .categoryall{
+                    display: inline-flex;
+                    flex-wrap: nowrap;
+                    button{
+                        border-radius: 8px;
+                        transition: all 0.2s cubic-bezier(0.25, 0, 0.35, 0.95);
+                        font-weight: 600;
+                        white-space: nowrap;
+                        background-color: rgba(255, 255, 255, 1);
+                        border: 1px solid rgba(225, 229, 230, 1);
+                    }
+                }
+            }
+        }
+    }
+    .eyefilter{
+        .filterall{
+            margin: 0px auto;
+            .filtercoll{
+                place-items: stretch;
+                display: grid;
+                .filtercoll2{
+                    .filter{
+                        display: flex;
+                        align-items: center;
+                        margin: auto;
+                        justify-content: space-between;
+                        .filterbtn{
+                            .btn1{
+                                .btnall{
+                                    display: flex;
+                                    align-items: center;
+                                    cursor: pointer;
+                                    .btnbutton{
+                                        display: flex;
+                                        align-items: center;
+                                    }
+                                    .btntext{
+                                        display: flex;
+                                        align-items: center;
+                                        cursor: pointer;
+                                        span{
+                                            font-weight: 400;
+                                            letter-spacing: 0px;
+                                        }
+                                    }
+                                }
+                            }
+                            .btn2{
+                                .btnall{
+                                    .btnbutton{
+                                        div{
+                                            display: flex;
+                                            align-items: center;
+                                            cursor: pointer;
+                                            color: rgba(103, 111, 120, 1);
+                                            span{
+                                                font-weight: 400;
+                                                letter-spacing: 0px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .filtersearch{
+                            display: flex;
+                            button{
+                                color: rgba(103, 111, 120, 1);
+                                background: transparent;
+                                display: inline-flex;
+                                align-items: center;
+                                border: none;
+                                transition: 0.2s cubic-bezier(0.25, 0, 0.35, 0.95);
+                            }
+                            .button1{
+                                .filtersvg{
+                                    padding-right: 8px;
+                                    display: inline-flex;
+                                    transition: 0.2s cubic-bezier(0.25, 0, 0.35, 0.95);
+                                }
+                                span{
+                                    font-weight: 600;
+                                    letter-spacing: 0px;
+                                }
+                                .filtersrc{
+                                    display: inline-flex;
+                                    transition: 0.2s cubic-bezier(0.25, 0, 0.35, 0.95);
+                                    div{
+                                        background-color: transparent;
+                                        position:absolute;
+                                        transition: background-color 0.2s cubic-bezier(0.25, 0, 0.35, 0.95);
+                                    }
+                                }
+                            }
+                            .button2{
+                                color: rgba(103, 111, 120, 1);
+                                position: relative;
+                                .filtersvg{
+                                    padding-right: 8px;
+                                    display: inline-flex;
+                                    transition: 0.2s cubic-bezier(0.25, 0, 0.35, 0.95);
+                                }
+                                span{
+                                    font-weight: 600;
+                                    letter-spacing: 0px;
+                                }
+                                .filtersrc{
+                                    display: inline-flex;
+                                    transition: 0.2s cubic-bezier(0.25, 0, 0.35, 0.95);
+                                    div{
+                                        background-color: transparent;
+                                        position:absolute;
+                                        transition: background-color 0.2s cubic-bezier(0.25, 0, 0.35, 0.95);
+                                    }
+                                }
+                            }
+                            .search{
+                                flex: 1 1 0%;
+                                justify-content: center;
+                                display: flex;
+                                button{
+                                    color: rgba(103, 111, 120, 1);
+                                    background: transparent;
+                                    display: inline-flex;
+                                    align-items: center;
+                                    border: none;
+                                    border-radius: 4px;
+                                    transition: 0.2s cubic-bezier(0.25, 0, 0.35, 0.95);
+                                    div{
+                                        display: inline-flex;
+                                        transition: 0.2s cubic-bezier(0.25, 0, 0.35, 0.95);
+                                    }
+                                    span{
+                                        font-weight: 600;
+                                        letter-spacing: 0px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .filterall2{
+            .filter2{
+                position: fixed;
+                bottom: 0px;
+                left: 0px;
+                width: 100%;
+                box-shadow: 0px 6px 24px 0px #414b563d;
+                z-index: 3;
+                pointer-events: all;
+                transition-delay: 0.2s;
+                padding: 16px 24px;
+                background: rgba(255, 255, 255, 1);
+                .filter3{
+                    button{
+                        width: 100%;
+                        background: rgba(0, 110, 165, 1);
+                        color: rgba(255, 255, 255, 1);
+                        border-radius: 100px;
+                        border: none;
+                        position: relative;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition: 0.2s cubic-bezier(0.25, 0, 0.35, 0.95);
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+        .filterall3{
+            margin: 0px auto;
+        }
+    }
+    .eyedata{
+        .dataall{
+            position: relative;
+            .data1{
+                animation: .2s k-btloMR 1 normal forwards ease-out;
+                position: absolute;
+                .dataanimation{
+                    animation: 1s cubic-bezier(0.38, 0.05, 0.31, 0.9) 0s infinite normal none running k-ehkJmT;
+                    display: inline-flex;
+                    img{
+                        height: 40px;
+                        width: 100%;
+                    }
+                }
+            }
+            .data2{
+                background-color: white;
+                opacity: 1;
+                pointer-events: initial;
+                width: 100%;
+                height: 100%;
+                position: relative;
+                transition-property: opacity;
+                transition-duration: 0.2s;
+                .shopdata1{
+                    margin: 0px auto;
+                    width: 100%;
+                    .shopdatacoll{
+                        place-items: stretch;
+                        display: grid;
+                        .datacoll{
+                            .productall{
+                                display: flex;
+                                justify-content: center;
+                                flex-wrap: wrap;
+                                .product{
+                                    .product1{
+                                        .prd1{
+                                            width: 100%;
+                                            position: relative;
+                                            .prd2{
+                                                width: 100%;
+                                                .prdimg{
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    background-color: rgba(248, 248, 248, 1);
+                                                    position: relative;
+                                                    a{
+                                                        display: inline-block;
+                                                        width: 100%;
+                                                        .prdimg1{
+                                                            display: block;
+                                                            position: relative;
+                                                            width: 100%;
+                                                            mix-blend-mode: multiply;
+                                                            .prdimg2{
+                                                                position: relative;
+                                                                width: 100%;
+                                                                div{
+                                                                    position: absolute;
+                                                                    top: 0;
+                                                                    right: 0;
+                                                                    bottom: 0;
+                                                                    left: 0;
+                                                                    img{
+                                                                        object-position: center;
+                                                                        object-fit: contain;
+                                                                        width: 100%;
+                                                                        height: 100%;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    .virtual{
+                                                        .tryon{
+                                                            display: flex;
+                                                            justify-content: flex-end;
+                                                            position: absolute;
+                                                            button{
+                                                                background: rgba(255, 255, 255, 1);
+                                                                color: rgba(65, 75, 86, 1);
+                                                                border-radius: 100px;
+                                                                transition: 0.6s cubic-bezier(0.25, 0.85, 0.35, 1);
+                                                                border: none;
+                                                                position: relative;
+                                                                display: inline-flex;
+                                                                justify-content: center;
+                                                                align-items: center;
+                                                                white-space: nowrap;
+                                                                svg{
+                                                                    transition: opacity 0.2s cubic-bezier(0.25, 0, 0.35, 0.9);
+                                                                    path{
+                                                                        fill: rgba(103, 111, 120, 1);
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                .prdcolor{
+                                                    display: grid;
+                                                    .colorname{
+                                                        align-items: center;
+                                                        color: rgba(65, 75, 86, 1);
+                                                        display: flex;
+                                                        justify-content: flex-start;
+                                                        a{
+                                                            display: inline-block;
+                                                            color: rgba(65, 75, 86, 1);
+                                                            h2{
+                                                                font-weight: 400;
+                                                                letter-spacing: 0px;
+                                                            }
+                                                        }
+                                                    }
+                                                    .colorimg{
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        align-items: flex-start;
+                                                        .colorimg1{
+                                                            display: flex;
+                                                            .colorimg2{
+                                                                outline: none;
+                                                                display: flex;
+                                                                flex-flow: wrap;
+                                                                justify-content: start;
+                                                                width: 100%;
+                                                                div{
+                                                                    display: flex;
+                                                                    justify-content: center;
+                                                                    align-items: center;
+                                                                    position: relative;
+                                                                    button{
+                                                                        position: relative;
+                                                                        background-color: rgba(225, 229, 230, 1);
+                                                                        background-size: contain;
+                                                                        border: none;
+                                                                        appearance: none;
+                                                                        border-radius: 100px;
+                                                                        transition: box-shadow 0.2s cubic-bezier(0.25, 0, 0.35, 0.95);
+                                                                        box-shadow: transparent 0px 0px 0px 2px, transparent 0px 0px 0px 3px;
+                                                                        cursor: pointer;
+                                                                        :hover{
+                                                                            box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(161, 164, 166) 0px 0px 0px 3px;
+                                                                            outline: none;
+                                                                        }
+                                                                        label{
+                                                                            border: 0px;
+                                                                            clip: rect(0px, 0px, 0px, 0px);
+                                                                            height: 1px;
+                                                                            margin: -1px;
+                                                                            overflow: hidden;
+                                                                            padding: 0px;
+                                                                            position: absolute;
+                                                                            white-space: nowrap;
+                                                                            width: 1px;
+                                                                        }
+                                                                    }
+                                                                    .clrimg1{
+                                                                        background-image: url('https://i.warbycdn.com/s/f/82673667483c6127ad12612d4b2a4e63137c53e8.jpg');
+                                                                        box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(65, 75, 86) 0px 0px 0px 3px;
+                                                                    }
+                                                                    .clrimg2{
+                                                                        background-image: url('https://i.warbycdn.com/s/f/4609b64eed797c167a971c2ab682e9bb3ec8b3f5.jpg');
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .shopdata2{
+                    .datatext{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        text-align: center;
+                        .datatext2{
+                            .datatext3{
+                                place-items: stretch;
+                                display: grid;
+                                .datatext4{
+                                    .datatextall{
+                                        display: flex;
+                                        flex-direction: column;
+                                        .datatexttop{
+                                            color: rgba(65, 75, 86, 1);
+                                            h2{
+                                                font-family: fairfontregular;
+                                                font-weight: 400;
+                                                letter-spacing: 0px;
+                                            }
+                                        }
+                                        .datatextbtm{
+                                            color: rgba(103, 111, 120, 1);
+                                            p{
+                                                font-weight: 400;
+                                                letter-spacing: 0px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
