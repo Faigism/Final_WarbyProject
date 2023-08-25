@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WarbyApp.Core.Entities
+{
+    public class WidthCategory:BaseEntity
+    {
+        public string Name { get; set; }
+        public List<EyeglassesWidthCategory> EyeglassesWidthCategories { get; set; }
+    }
+}

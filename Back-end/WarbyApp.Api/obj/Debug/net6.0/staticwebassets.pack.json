@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\WarbySiteApp\\WarbyApp.Api\\wwwroot\\uploads\\eyeglasses\\3d31b307-5b89-4b5b-8838-9174899ac5b6IMG_6330.jpg",
+      "PackagePath": "staticwebassets\\uploads\\eyeglasses\\3d31b307-5b89-4b5b-8838-9174899ac5b6IMG_6330.jpg"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\WarbySiteApp\\WarbyApp.Api\\wwwroot\\uploads\\eyeglasses\\3fab12fc-2f7a-47c3-a2ca-52573ce8202cimage_50378241.JPG",
+      "PackagePath": "staticwebassets\\uploads\\eyeglasses\\3fab12fc-2f7a-47c3-a2ca-52573ce8202cimage_50378241.JPG"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\WarbySiteApp\\WarbyApp.Api\\wwwroot\\uploads\\eyeglasses\\ca55cecb-d183-433b-8c6c-d0d85255fe6bIMG_6330.jpg",
+      "PackagePath": "staticwebassets\\uploads\\eyeglasses\\ca55cecb-d183-433b-8c6c-d0d85255fe6bIMG_6330.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.WarbyApp.Api.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.WarbyApp.Api.props",
+      "PackagePath": "build\\WarbyApp.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.WarbyApp.Api.props",
+      "PackagePath": "buildMultiTargeting\\WarbyApp.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.WarbyApp.Api.props",
+      "PackagePath": "buildTransitive\\WarbyApp.Api.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

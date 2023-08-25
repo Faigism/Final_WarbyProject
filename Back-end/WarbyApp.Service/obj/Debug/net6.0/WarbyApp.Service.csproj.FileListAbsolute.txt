@@ -1,0 +1,17 @@
+C:\Users\faiqi\OneDrive\Desktop\WarbySiteApp\WarbyApp.Service\bin\Debug\net6.0\WarbyApp.Service.deps.json
+C:\Users\faiqi\OneDrive\Desktop\WarbySiteApp\WarbyApp.Service\bin\Debug\net6.0\WarbyApp.Service.dll
+C:\Users\faiqi\OneDrive\Desktop\WarbySiteApp\WarbyApp.Service\bin\Debug\net6.0\WarbyApp.Service.pdb
+C:\Users\faiqi\OneDrive\Desktop\WarbySiteApp\WarbyApp.Service\bin\Debug\net6.0\WarbyApp.Core.dll
+C:\Users\faiqi\OneDrive\Desktop\WarbySiteApp\WarbyApp.Service\bin\Debug\net6.0\WarbyApp.Data.dll
+C:\Users\faiqi\OneDrive\Desktop\WarbySiteApp\WarbyApp.Service\bin\Debug\net6.0\WarbyApp.Data.pdb
+C:\Users\faiqi\OneDrive\Desktop\WarbySiteApp\WarbyApp.Service\bin\Debug\net6.0\WarbyApp.Core.pdb
+C:\Users\faiqi\OneDrive\Desktop\WarbySiteApp\WarbyApp.Service\obj\Debug\net6.0\WarbyApp.Service.csproj.AssemblyReference.cache
+C:\Users\faiqi\OneDrive\Desktop\WarbySiteApp\WarbyApp.Service\obj\Debug\net6.0\WarbyApp.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\faiqi\OneDrive\Desktop\WarbySiteApp\WarbyApp.Service\obj\Debug\net6.0\WarbyApp.Service.AssemblyInfoInputs.cache
+C:\Users\faiqi\OneDrive\Desktop\WarbySiteApp\WarbyApp.Service\obj\Debug\net6.0\WarbyApp.Service.AssemblyInfo.cs
+C:\Users\faiqi\OneDrive\Desktop\WarbySiteApp\WarbyApp.Service\obj\Debug\net6.0\WarbyApp.Service.csproj.CoreCompileInputs.cache
+C:\Users\faiqi\OneDrive\Desktop\WarbySiteApp\WarbyApp.Service\obj\Debug\net6.0\WarbyApp.Service.csproj.CopyComplete
+C:\Users\faiqi\OneDrive\Desktop\WarbySiteApp\WarbyApp.Service\obj\Debug\net6.0\WarbyApp.Service.dll
+C:\Users\faiqi\OneDrive\Desktop\WarbySiteApp\WarbyApp.Service\obj\Debug\net6.0\refint\WarbyApp.Service.dll
+C:\Users\faiqi\OneDrive\Desktop\WarbySiteApp\WarbyApp.Service\obj\Debug\net6.0\WarbyApp.Service.pdb
+C:\Users\faiqi\OneDrive\Desktop\WarbySiteApp\WarbyApp.Service\obj\Debug\net6.0\ref\WarbyApp.Service.dll

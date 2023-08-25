@@ -1,0 +1,52 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\eyeglasses\3d31b307-5b89-4b5b-8838-9174899ac5b6IMG_6330.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>WarbyApp.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/WarbyApp.Api</BasePath>
+      <RelativePath>uploads/eyeglasses/3d31b307-5b89-4b5b-8838-9174899ac5b6IMG_6330.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\eyeglasses\3d31b307-5b89-4b5b-8838-9174899ac5b6IMG_6330.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\eyeglasses\3fab12fc-2f7a-47c3-a2ca-52573ce8202cimage_50378241.JPG))">
+      <SourceType>Package</SourceType>
+      <SourceId>WarbyApp.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/WarbyApp.Api</BasePath>
+      <RelativePath>uploads/eyeglasses/3fab12fc-2f7a-47c3-a2ca-52573ce8202cimage_50378241.JPG</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\eyeglasses\3fab12fc-2f7a-47c3-a2ca-52573ce8202cimage_50378241.JPG))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\eyeglasses\ca55cecb-d183-433b-8c6c-d0d85255fe6bIMG_6330.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>WarbyApp.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/WarbyApp.Api</BasePath>
+      <RelativePath>uploads/eyeglasses/ca55cecb-d183-433b-8c6c-d0d85255fe6bIMG_6330.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\eyeglasses\ca55cecb-d183-433b-8c6c-d0d85255fe6bIMG_6330.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+  </ItemGroup>
+</Project>
