@@ -16,7 +16,7 @@ namespace WarbyApp.Service.Dtos.EyeglassesDtos
         public decimal CostPrice { get; set; }
         public decimal SalePrice { get; set; }
         public decimal DiscountPercent { get; set; }
-        public List<IFormFile> ImageFiles { get; set; }
+        public IFormFile ImageName { get; set; }
     }
     public class EyeglassesCreateDtoValidator : AbstractValidator<EyeglassesCreateDto>
     {
@@ -33,22 +33,18 @@ namespace WarbyApp.Service.Dtos.EyeglassesDtos
             RuleFor(x => x.DiscountPercent)
                 .InclusiveBetween(0, 100);
 
-            RuleFor(x => x.ImageFiles).NotNull();
+            RuleFor(x => x.ImageName).NotNull();
 
             RuleFor(x => x).Custom((x, context) =>
             {
-                if (x.ImageFiles != null)
+                if (x.ImageName != null)
                 {
-                    foreach(var file in x.ImageFiles)
-                    {
-                        if (file.Length > 2 * 1024 * 1024)
-                            context.AddFailure("ImageFile", "Image file must be less or equal that 2MB");
+                    if (x.ImageName.Length > 2 * 1024 * 1024)
+                        context.AddFailure("ImageFile", "Image file must be less or equal that 2MB");
 
-                        if (file.ContentType != "image/png" && file.ContentType != "image/jpeg")
-                            context.AddFailure("ImageFile", "Image file must be png,jpg or jpeg");
-                    }
+                    if (x.ImageName.ContentType != "image/png" && x.ImageName.ContentType != "image/jpeg")
+                        context.AddFailure("ImageFile", "Image file must be png,jpg or jpeg");
                 }
-
             });
         }
     }

@@ -1,16 +1,16 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\WarbySiteApp\\WarbyApp.Api\\wwwroot\\uploads\\eyeglasses\\3d31b307-5b89-4b5b-8838-9174899ac5b6IMG_6330.jpg",
-      "PackagePath": "staticwebassets\\uploads\\eyeglasses\\3d31b307-5b89-4b5b-8838-9174899ac5b6IMG_6330.jpg"
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\WarbySiteApp\\WarbyApp.Api\\wwwroot\\uploads\\mainimages\\81a74faf-271c-4142-b517-0722e2fbea6aIMG_6330.jpg",
+      "PackagePath": "staticwebassets\\uploads\\mainimages\\81a74faf-271c-4142-b517-0722e2fbea6aIMG_6330.jpg"
     },
     {
-      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\WarbySiteApp\\WarbyApp.Api\\wwwroot\\uploads\\eyeglasses\\3fab12fc-2f7a-47c3-a2ca-52573ce8202cimage_50378241.JPG",
-      "PackagePath": "staticwebassets\\uploads\\eyeglasses\\3fab12fc-2f7a-47c3-a2ca-52573ce8202cimage_50378241.JPG"
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\WarbySiteApp\\WarbyApp.Api\\wwwroot\\uploads\\mainimages\\d2fc2151-c336-4acb-ac8a-5dd372623903pro-small-3.jpg",
+      "PackagePath": "staticwebassets\\uploads\\mainimages\\d2fc2151-c336-4acb-ac8a-5dd372623903pro-small-3.jpg"
     },
     {
-      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\WarbySiteApp\\WarbyApp.Api\\wwwroot\\uploads\\eyeglasses\\ca55cecb-d183-433b-8c6c-d0d85255fe6bIMG_6330.jpg",
-      "PackagePath": "staticwebassets\\uploads\\eyeglasses\\ca55cecb-d183-433b-8c6c-d0d85255fe6bIMG_6330.jpg"
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\WarbySiteApp\\WarbyApp.Api\\wwwroot\\uploads\\mainimages\\f89c3366-18cc-4391-8981-0c32798aaedaproduct-details-img4.jpg",
+      "PackagePath": "staticwebassets\\uploads\\mainimages\\f89c3366-18cc-4391-8981-0c32798aaedaproduct-details-img4.jpg"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.WarbyApp.Api.Microsoft.AspNetCore.StaticWebAssets.props",

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,12 +19,14 @@ namespace WarbyApp.Service.Implementations
     {
         private readonly IEyeglassesRepository _eyeglassesRepository;
         private readonly IMapper _mapper;
+        private readonly IHttpContextAccessor _httpContextAccessor;
         private string _rootPath;
 
-        public EyeglassesService(IEyeglassesRepository eyeglassesRepository, IMapper mapper)
+        public EyeglassesService(IEyeglassesRepository eyeglassesRepository, IMapper mapper, IHttpContextAccessor httpContextAccessor)
         {
             _eyeglassesRepository = eyeglassesRepository;
             _mapper = mapper;
+            _httpContextAccessor = httpContextAccessor;
             _rootPath = Directory.GetCurrentDirectory() + "/wwwroot";
         }
 
@@ -31,11 +34,8 @@ namespace WarbyApp.Service.Implementations
         {
             if (_eyeglassesRepository.IsExist(x => x.Name == createDto.Name))
                 throw new RestException(System.Net.HttpStatusCode.BadRequest, "Name", $"Name already take");
-
             var entity = _mapper.Map<Eyeglasses>(createDto);
-
-            entity.EyeglassesImages = FileManager.Save(createDto.ImageFiles, _rootPath, "uploads/eyeglasses");
-
+            entity.ImageName = FileManager.Save(createDto.ImageName, _rootPath, "uploads/mainimages");
             _eyeglassesRepository.Add(entity);
             _eyeglassesRepository.Commit();
 
@@ -54,14 +54,28 @@ namespace WarbyApp.Service.Implementations
             entity.CostPrice = editDto.CostPrice;
             entity.SalePrice = editDto.SalePrice;
             entity.DiscountPercent = editDto.DiscountPercent;
+            entity.ModifiedAt = DateTime.UtcNow;
+            string existMainImages = null;
 
+            if (editDto.ImageName != null)
+            {
+                existMainImages = entity.ImageName;
+                entity.ImageName = FileManager.Save(editDto.ImageName, _rootPath, "uploads/mainimages");
+            }
             _eyeglassesRepository.Commit();
+            if (existMainImages != null)
+                FileManager.Delete(_rootPath, "uploads/mainimages", existMainImages);
         }
         public List<EyeglassesGetAllDto> GetAll()
         {
             var entities = _eyeglassesRepository.GetQueryable(x => true).ToList();
-
-            return _mapper.Map<List<EyeglassesGetAllDto>>(entities);
+            var getallDto = _mapper.Map<List<EyeglassesGetAllDto>>(entities);
+            var baseUrl = new UriBuilder(_httpContextAccessor.HttpContext.Request.Scheme, _httpContextAccessor.HttpContext.Request.Host.Host, _httpContextAccessor.HttpContext.Request.Host.Port ?? -1);
+            for (int i = 0; i < getallDto.Count; i++)
+            {
+                getallDto[i].ImageUrl = baseUrl + "/uploads/mainimages/" + entities[i].ImageName;
+            }
+            return getallDto;
         }
 
         public EyeglassesGetDto GetById(int id)
@@ -69,7 +83,10 @@ namespace WarbyApp.Service.Implementations
             var entity = _eyeglassesRepository.Get(x => x.Id == id);
             if (entity == null)
                 throw new RestException(System.Net.HttpStatusCode.NotFound, $"Eyeglasses not found by id:{id}");
-            return _mapper.Map<EyeglassesGetDto>(entity);
+            var getdto = _mapper.Map<EyeglassesGetDto>(entity);
+            var baseUrl = new UriBuilder(_httpContextAccessor.HttpContext.Request.Scheme, _httpContextAccessor.HttpContext.Request.Host.Host, _httpContextAccessor.HttpContext.Request.Host.Port ?? -1);
+            getdto.ImageUrl = baseUrl + "/uploads/mainimages/" + entity.ImageName;
+            return getdto;
         }
         public void Delete(int id)
         {

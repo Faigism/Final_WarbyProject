@@ -21,7 +21,7 @@ namespace WarbyApp.Api.Controllers
             return StatusCode(201, _eyeglassesService.Create(createDto));
         }
         [HttpPut("{id}")]
-        public IActionResult Edit(int id, EyeglassesEditDto editDto)
+        public IActionResult Edit(int id, [FromForm] EyeglassesEditDto editDto)
         {
             _eyeglassesService.Edit(id, editDto);
             return NoContent();

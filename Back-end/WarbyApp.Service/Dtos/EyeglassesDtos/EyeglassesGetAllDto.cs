@@ -11,13 +11,9 @@ namespace WarbyApp.Service.Dtos.EyeglassesDtos
         public int Id { get; set; }
         public string Name { get; set; }
         public string Material { get; set; }
+        public decimal CostPrice { get; set; }
         public decimal SalePrice { get; set; }
         public decimal DiscoutPercent { get; set; }
-        public CategoryWidthEyeglassesGetAllDto WidthCategory { get; set; }
-    }
-    public class CategoryWidthEyeglassesGetAllDto
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
+        public string ImageUrl { get; set; }
     }
 }

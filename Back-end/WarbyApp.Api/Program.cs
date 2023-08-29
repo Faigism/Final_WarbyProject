@@ -44,6 +44,8 @@ builder.Services.AddScoped<IEyeglassesRepository, EyeglassesRepository>();
 builder.Services.AddScoped<IEyeglassesService, EyeglassesService>();
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 
+builder.Services.AddHttpContextAccessor();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -56,6 +58,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+app.UseStaticFiles();
 
 app.MapControllers();
 app.UseMiddleware<ExceptionHandlingMiddleware>();
