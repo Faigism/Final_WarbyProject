@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "BG4AtDnsPlXTopnlEII3re4e6ie5pKdlXigz0cpbNQc=",
+  "Hash": "xS0SGyF6YuinfdFvJD6NWGEYKL32IfVBDPS24qNQUVg=",
   "Source": "WarbyApp.Api",
   "BasePath": "_content/WarbyApp.Api",
   "Mode": "Default",
@@ -10,19 +10,19 @@
     {
       "Name": "WarbyApp.Api\\wwwroot",
       "Source": "WarbyApp.Api",
-      "ContentRoot": "C:\\Users\\faiqi\\OneDrive\\Desktop\\WarbySiteApp\\WarbyApp.Api\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.Api\\wwwroot\\",
       "BasePath": "_content/WarbyApp.Api",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\faiqi\\OneDrive\\Desktop\\WarbySiteApp\\WarbyApp.Api\\wwwroot\\uploads\\mainimages\\81a74faf-271c-4142-b517-0722e2fbea6aIMG_6330.jpg",
+      "Identity": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.Api\\wwwroot\\uploads\\mainimages\\eyeglasses\\164b52ee-0b37-4978-b2c2-69d4c316772dproduct-3.jpg",
       "SourceId": "WarbyApp.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\faiqi\\OneDrive\\Desktop\\WarbySiteApp\\WarbyApp.Api\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.Api\\wwwroot\\",
       "BasePath": "_content/WarbyApp.Api",
-      "RelativePath": "uploads/mainimages/81a74faf-271c-4142-b517-0722e2fbea6aIMG_6330.jpg",
+      "RelativePath": "uploads/mainimages/eyeglasses/164b52ee-0b37-4978-b2c2-69d4c316772dproduct-3.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -31,15 +31,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\mainimages\\81a74faf-271c-4142-b517-0722e2fbea6aIMG_6330.jpg"
+      "OriginalItemSpec": "wwwroot\\uploads\\mainimages\\eyeglasses\\164b52ee-0b37-4978-b2c2-69d4c316772dproduct-3.jpg"
     },
     {
-      "Identity": "C:\\Users\\faiqi\\OneDrive\\Desktop\\WarbySiteApp\\WarbyApp.Api\\wwwroot\\uploads\\mainimages\\d2fc2151-c336-4acb-ac8a-5dd372623903pro-small-3.jpg",
+      "Identity": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.Api\\wwwroot\\uploads\\mainimages\\eyeglasses\\29f16cb5-e430-485f-8134-3de44f83b095product-8.jpg",
       "SourceId": "WarbyApp.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\faiqi\\OneDrive\\Desktop\\WarbySiteApp\\WarbyApp.Api\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.Api\\wwwroot\\",
       "BasePath": "_content/WarbyApp.Api",
-      "RelativePath": "uploads/mainimages/d2fc2151-c336-4acb-ac8a-5dd372623903pro-small-3.jpg",
+      "RelativePath": "uploads/mainimages/eyeglasses/29f16cb5-e430-485f-8134-3de44f83b095product-8.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -48,15 +48,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\mainimages\\d2fc2151-c336-4acb-ac8a-5dd372623903pro-small-3.jpg"
+      "OriginalItemSpec": "wwwroot\\uploads\\mainimages\\eyeglasses\\29f16cb5-e430-485f-8134-3de44f83b095product-8.jpg"
     },
     {
-      "Identity": "C:\\Users\\faiqi\\OneDrive\\Desktop\\WarbySiteApp\\WarbyApp.Api\\wwwroot\\uploads\\mainimages\\f89c3366-18cc-4391-8981-0c32798aaedaproduct-details-img4.jpg",
+      "Identity": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.Api\\wwwroot\\uploads\\mainimages\\sunglasses\\71853840-4b4d-4a21-828b-6055b942e001pro-small-2.jpg",
       "SourceId": "WarbyApp.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\faiqi\\OneDrive\\Desktop\\WarbySiteApp\\WarbyApp.Api\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.Api\\wwwroot\\",
       "BasePath": "_content/WarbyApp.Api",
-      "RelativePath": "uploads/mainimages/f89c3366-18cc-4391-8981-0c32798aaedaproduct-details-img4.jpg",
+      "RelativePath": "uploads/mainimages/sunglasses/71853840-4b4d-4a21-828b-6055b942e001pro-small-2.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -65,7 +65,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\mainimages\\f89c3366-18cc-4391-8981-0c32798aaedaproduct-details-img4.jpg"
+      "OriginalItemSpec": "wwwroot\\uploads\\mainimages\\sunglasses\\71853840-4b4d-4a21-828b-6055b942e001pro-small-2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.Api\\wwwroot\\uploads\\mainimages\\sunglasses\\74208873-a764-45eb-af86-1e547fe1c46eproduct-7.jpg",
+      "SourceId": "WarbyApp.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.Api\\wwwroot\\",
+      "BasePath": "_content/WarbyApp.Api",
+      "RelativePath": "uploads/mainimages/sunglasses/74208873-a764-45eb-af86-1e547fe1c46eproduct-7.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\mainimages\\sunglasses\\74208873-a764-45eb-af86-1e547fe1c46eproduct-7.jpg"
     }
   ]
 }

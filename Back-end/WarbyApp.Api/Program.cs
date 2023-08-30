@@ -42,6 +42,8 @@ builder.Services.AddValidatorsFromAssemblyContaining<EyeglassesCreateDtoValidato
 
 builder.Services.AddScoped<IEyeglassesRepository, EyeglassesRepository>();
 builder.Services.AddScoped<IEyeglassesService, EyeglassesService>();
+builder.Services.AddScoped<ISunglassesRepository, SunglassesRepository>();
+builder.Services.AddScoped<ISunglassesService, SunglassesService>();
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 builder.Services.AddHttpContextAccessor();

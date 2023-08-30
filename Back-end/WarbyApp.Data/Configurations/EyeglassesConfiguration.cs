@@ -21,6 +21,10 @@ namespace WarbyApp.Data.Configurations
             builder.Property(x => x.Description2).IsRequired(false).HasMaxLength(500);
             builder.Property(x => x.DiscountPercent).HasColumnType("decimal(5,2)");
             builder.Property(x => x.ImageName).IsRequired().HasMaxLength(200);
+            builder
+                .HasMany(c => c.Colors)
+                .WithOne(e => e.Eyeglasses)
+                .HasForeignKey(ei => ei.EyeglassesId);
         }
     }
 }

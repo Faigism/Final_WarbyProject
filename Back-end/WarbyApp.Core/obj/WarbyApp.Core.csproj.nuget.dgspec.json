@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\faiqi\\OneDrive\\Desktop\\WarbySiteApp\\WarbyApp.Core\\WarbyApp.Core.csproj": {}
+    "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.Core\\WarbyApp.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\faiqi\\OneDrive\\Desktop\\WarbySiteApp\\WarbyApp.Core\\WarbyApp.Core.csproj": {
+    "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.Core\\WarbyApp.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\faiqi\\OneDrive\\Desktop\\WarbySiteApp\\WarbyApp.Core\\WarbyApp.Core.csproj",
+        "projectUniqueName": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.Core\\WarbyApp.Core.csproj",
         "projectName": "WarbyApp.Core",
-        "projectPath": "C:\\Users\\faiqi\\OneDrive\\Desktop\\WarbySiteApp\\WarbyApp.Core\\WarbyApp.Core.csproj",
+        "projectPath": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.Core\\WarbyApp.Core.csproj",
         "packagesPath": "C:\\Users\\faiqi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\faiqi\\OneDrive\\Desktop\\WarbySiteApp\\WarbyApp.Core\\obj\\",
+        "outputPath": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

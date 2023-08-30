@@ -22,7 +22,9 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\uploads\detailimages\" />
-    <Folder Include="wwwroot\uploads\mainimages\" />
+    <Folder Include="wwwroot\uploads\mainimages\eyeglasses\" />
+    <Folder Include="wwwroot\uploads\mainimages\sunglasses\" />
+    <Folder Include="wwwroot\uploads\colorimages\" />
   </ItemGroup>
 
 </Project>

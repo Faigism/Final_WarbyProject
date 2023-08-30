@@ -14,13 +14,18 @@ namespace WarbyApp.Data
         public WarbyAppDbContext(DbContextOptions<WarbyAppDbContext> options):base(options) { }
         public DbSet<Eyeglasses> Eyeglasses { get; set; }
         public DbSet<Sunglasses> Sunglasses { get; set; }
-        public DbSet<Accessories> Accessories { get; set; }
-        public DbSet<ContactLens> ContactLens { get; set; }
+        public DbSet<Color> Colors { get; set; }
+        public DbSet<EyeglassesColor> EyeglassesColors { get; set; }
+        public DbSet<SunglassesColor> SunglassesColors { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(EyeglassesConfiguration).Assembly);
             base.OnModelCreating(modelBuilder);
 
+            modelBuilder.Entity<EyeglassesColor>()
+                .HasKey(x => new { x.EyeglassesId, x.ColorId });
+            modelBuilder.Entity<SunglassesColor>()
+                .HasKey(x => new { x.SunglassesId, x.ColorId });
         }
     }
 }

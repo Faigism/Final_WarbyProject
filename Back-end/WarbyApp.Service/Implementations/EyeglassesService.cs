@@ -12,6 +12,7 @@ using WarbyApp.Service.Dtos.EyeglassesDtos;
 using WarbyApp.Service.Exceptions;
 using WarbyApp.Service.Helpers;
 using WarbyApp.Service.Interfaces;
+using static WarbyApp.Service.Dtos.EyeglassesDtos.EyeglassesGetAllColorDto;
 
 namespace WarbyApp.Service.Implementations
 {
@@ -35,7 +36,7 @@ namespace WarbyApp.Service.Implementations
             if (_eyeglassesRepository.IsExist(x => x.Name == createDto.Name))
                 throw new RestException(System.Net.HttpStatusCode.BadRequest, "Name", $"Name already take");
             var entity = _mapper.Map<Eyeglasses>(createDto);
-            entity.ImageName = FileManager.Save(createDto.ImageName, _rootPath, "uploads/mainimages");
+            entity.ImageName = FileManager.Save(createDto.ImageName, _rootPath, "uploads/mainimages/eyeglasses");
             _eyeglassesRepository.Add(entity);
             _eyeglassesRepository.Commit();
 
@@ -60,32 +61,84 @@ namespace WarbyApp.Service.Implementations
             if (editDto.ImageName != null)
             {
                 existMainImages = entity.ImageName;
-                entity.ImageName = FileManager.Save(editDto.ImageName, _rootPath, "uploads/mainimages");
+                entity.ImageName = FileManager.Save(editDto.ImageName, _rootPath, "uploads/mainimages/eyeglasses");
             }
             _eyeglassesRepository.Commit();
             if (existMainImages != null)
-                FileManager.Delete(_rootPath, "uploads/mainimages", existMainImages);
+                FileManager.Delete(_rootPath, "uploads/mainimages/eyeglasses", existMainImages);
         }
         public List<EyeglassesGetAllDto> GetAll()
         {
-            var entities = _eyeglassesRepository.GetQueryable(x => true).ToList();
+            var entities = _eyeglassesRepository.GetQueryable(x => true, "Colors.Color").ToList();
             var getallDto = _mapper.Map<List<EyeglassesGetAllDto>>(entities);
             var baseUrl = new UriBuilder(_httpContextAccessor.HttpContext.Request.Scheme, _httpContextAccessor.HttpContext.Request.Host.Host, _httpContextAccessor.HttpContext.Request.Host.Port ?? -1);
             for (int i = 0; i < getallDto.Count; i++)
             {
-                getallDto[i].ImageUrl = baseUrl + "/uploads/mainimages/" + entities[i].ImageName;
+                getallDto[i].ImageUrl = baseUrl + "/uploads/mainimages/eyeglasses/" + entities[i].ImageName;
+                var dto = getallDto[i];
+                var entity = entities.FirstOrDefault(e => e.Id == dto.Id);
+
+                if (entity != null && entity.Colors != null)
+                {
+                    dto.Colors = entity.Colors.Select(c =>
+                    {
+                        if (c != null && c.Color != null)
+                        {
+                            return new EyeglassesGetAllColorDto
+                            {
+                                ColorId = c.ColorId,
+                                Color = new EyeColorAllDto
+                                {
+                                    ColorName = c.Color.ColorName,
+                                    ColorImage = c.Color.ColorImage
+                                }
+                            };
+                        }
+                        else
+                        {
+                            return new EyeglassesGetAllColorDto
+                            {
+                                ColorId = c.ColorId,
+                                Color = new EyeColorAllDto
+                                {
+                                    ColorName = "Not Color Name",
+                                    ColorImage = "Not Color Image"
+                                }
+                            };
+                        }
+                    }).ToList();
+                }
             }
             return getallDto;
         }
 
         public EyeglassesGetDto GetById(int id)
         {
-            var entity = _eyeglassesRepository.Get(x => x.Id == id);
+            var entity = _eyeglassesRepository.Get(x => x.Id == id, "Colors.Color");
             if (entity == null)
                 throw new RestException(System.Net.HttpStatusCode.NotFound, $"Eyeglasses not found by id:{id}");
             var getdto = _mapper.Map<EyeglassesGetDto>(entity);
             var baseUrl = new UriBuilder(_httpContextAccessor.HttpContext.Request.Scheme, _httpContextAccessor.HttpContext.Request.Host.Host, _httpContextAccessor.HttpContext.Request.Host.Port ?? -1);
-            getdto.ImageUrl = baseUrl + "/uploads/mainimages/" + entity.ImageName;
+            getdto.ImageUrl = baseUrl + "/uploads/mainimages/eyeglasses/" + entity.ImageName;
+            if (entity.Colors != null)
+            {
+                getdto.Colors = entity.Colors.Select(c =>
+                {
+                    return new EyeglassesGetColorDto
+                    {
+                        ColorId = c.ColorId,
+                        Color = new EyeglassesGetColorDto.EyeColorGetDto
+                        {
+                            ColorName = c.Color.ColorName,
+                            ColorImage = c.Color.ColorImage
+                        }
+                    };
+                }).ToList();
+            }
+            else
+            {
+                getdto.Colors = new List<EyeglassesGetColorDto>();
+            }
             return getdto;
         }
         public void Delete(int id)

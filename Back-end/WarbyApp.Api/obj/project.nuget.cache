@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EVh2B6vWZ0a9C6qLIgK64gzoREiCArsjEWLeu32nUximDc314Hyo74PIi3YEoqQEBPtbWZnSsm+kq7ZHe2j+Gg==",
+  "dgSpecHash": "45aLO9Puc2JO+ixYLOvZQzMVHqcM5AuygsnmL5mTgFeK0DS8Nl3Hls4J2hIYnXEk1O3GNzA3pTa433r1l7hxIA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\faiqi\\OneDrive\\Desktop\\WarbySiteApp\\WarbyApp.Api\\WarbyApp.Api.csproj",
+  "projectFilePath": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.Api\\WarbyApp.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\faiqi\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\faiqi\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

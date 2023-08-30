@@ -12,8 +12,8 @@ using WarbyApp.Data;
 namespace WarbyApp.Data.Migrations
 {
     [DbContext(typeof(WarbyAppDbContext))]
-    [Migration("20230828140641_SunglassesAccessoriesandContactLensTablesCreate")]
-    partial class SunglassesAccessoriesandContactLensTablesCreate
+    [Migration("20230829104214_ColorsCreateTable")]
+    partial class ColorsCreateTable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,7 +24,7 @@ namespace WarbyApp.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("WarbyApp.Core.Entities.Accessories", b =>
+            modelBuilder.Entity("WarbyApp.Core.Entities.Color", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -32,97 +32,19 @@ namespace WarbyApp.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<decimal>("CostPrice")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<string>("ColorImage")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("DiscountPercent")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("ImageName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Material")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("ModifiedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("SalePrice")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<string>("ColorName")
+                        .IsRequired()
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Accessories");
-                });
-
-            modelBuilder.Entity("WarbyApp.Core.Entities.ContactLens", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<bool>("AcuvueBrand")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("AiroptikBrand")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("BiofinityBrand")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("BiotrueBrand")
-                        .HasColumnType("bit");
-
-                    b.Property<decimal>("CostPrice")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("DailiesBrand")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("DiscountPercent")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("ImageName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Material")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("ModifiedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Pack")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("PrecisionBrand")
-                        .HasColumnType("bit");
-
-                    b.Property<decimal>("SalePrice")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ContactLens");
+                    b.ToTable("Colors");
                 });
 
             modelBuilder.Entity("WarbyApp.Core.Entities.Eyeglasses", b =>
@@ -197,6 +119,21 @@ namespace WarbyApp.Data.Migrations
                     b.ToTable("Eyeglasses");
                 });
 
+            modelBuilder.Entity("WarbyApp.Core.Entities.EyeglassesColor", b =>
+                {
+                    b.Property<int>("EyeglassesId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ColorId")
+                        .HasColumnType("int");
+
+                    b.HasKey("EyeglassesId", "ColorId");
+
+                    b.HasIndex("ColorId");
+
+                    b.ToTable("EyeglassesColors");
+                });
+
             modelBuilder.Entity("WarbyApp.Core.Entities.Sunglasses", b =>
                 {
                     b.Property<int>("Id")
@@ -267,6 +204,69 @@ namespace WarbyApp.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Sunglasses");
+                });
+
+            modelBuilder.Entity("WarbyApp.Core.Entities.SunglassesColor", b =>
+                {
+                    b.Property<int>("SunglassesId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ColorId")
+                        .HasColumnType("int");
+
+                    b.HasKey("SunglassesId", "ColorId");
+
+                    b.HasIndex("ColorId");
+
+                    b.ToTable("SunglassesColors");
+                });
+
+            modelBuilder.Entity("WarbyApp.Core.Entities.EyeglassesColor", b =>
+                {
+                    b.HasOne("WarbyApp.Core.Entities.Color", "Color")
+                        .WithMany()
+                        .HasForeignKey("ColorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("WarbyApp.Core.Entities.Eyeglasses", "Eyeglasses")
+                        .WithMany("Colors")
+                        .HasForeignKey("EyeglassesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Color");
+
+                    b.Navigation("Eyeglasses");
+                });
+
+            modelBuilder.Entity("WarbyApp.Core.Entities.SunglassesColor", b =>
+                {
+                    b.HasOne("WarbyApp.Core.Entities.Color", "Color")
+                        .WithMany()
+                        .HasForeignKey("ColorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("WarbyApp.Core.Entities.Sunglasses", "Sunglasses")
+                        .WithMany("Colors")
+                        .HasForeignKey("SunglassesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Color");
+
+                    b.Navigation("Sunglasses");
+                });
+
+            modelBuilder.Entity("WarbyApp.Core.Entities.Eyeglasses", b =>
+                {
+                    b.Navigation("Colors");
+                });
+
+            modelBuilder.Entity("WarbyApp.Core.Entities.Sunglasses", b =>
+                {
+                    b.Navigation("Colors");
                 });
 #pragma warning restore 612, 618
         }
