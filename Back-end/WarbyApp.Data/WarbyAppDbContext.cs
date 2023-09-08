@@ -17,6 +17,11 @@ namespace WarbyApp.Data
         public DbSet<Color> Colors { get; set; }
         public DbSet<EyeglassesColor> EyeglassesColors { get; set; }
         public DbSet<SunglassesColor> SunglassesColors { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<EyeglassesCategory> EyeglassesCategories { get; set; }
+        public DbSet<SunglassesCategory> SunglassesCategories { get; set; }
+        public DbSet<CategoryName> CategoryNames { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(EyeglassesConfiguration).Assembly);
@@ -26,6 +31,10 @@ namespace WarbyApp.Data
                 .HasKey(x => new { x.EyeglassesId, x.ColorId });
             modelBuilder.Entity<SunglassesColor>()
                 .HasKey(x => new { x.SunglassesId, x.ColorId });
+            modelBuilder.Entity<EyeglassesCategory>()
+                .HasKey(x => new { x.EyeglassesId, x.CategoryId });
+            modelBuilder.Entity<SunglassesCategory>()
+                .HasKey(x => new { x.SunglassesId, x.CategoryId });
         }
     }
 }

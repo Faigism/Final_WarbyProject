@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WarbyApp.Core.Entities;
 using WarbyApp.Core.Repositories;
+using WarbyApp.Data.Repositories;
 using WarbyApp.Service.Dtos.Common;
 using WarbyApp.Service.Dtos.SunglassesDtos;
 using WarbyApp.Service.Exceptions;
@@ -20,13 +21,15 @@ namespace WarbyApp.Service.Implementations
     public class SunglassesService:ISunglassesService
     {
         private readonly ISunglassesRepository _sunglassesRepository;
+        private readonly IColorRepository _colorRepository;
         private readonly IMapper _mapper;
         private readonly IHttpContextAccessor _httpContextAccessor;
         private string _rootPath;
 
-        public SunglassesService(ISunglassesRepository sunglassesRepository, IMapper mapper, IHttpContextAccessor httpContextAccessor)
+        public SunglassesService(ISunglassesRepository sunglassesRepository, IColorRepository colorRepository, IMapper mapper, IHttpContextAccessor httpContextAccessor)
         {
             _sunglassesRepository = sunglassesRepository;
+            _colorRepository = colorRepository;
             _mapper = mapper;
             _httpContextAccessor = httpContextAccessor;
             _rootPath = Directory.GetCurrentDirectory() + "/wwwroot";
@@ -36,12 +39,18 @@ namespace WarbyApp.Service.Implementations
         {
             if (_sunglassesRepository.IsExist(x => x.Name == createDto.Name))
                 throw new RestException(System.Net.HttpStatusCode.BadRequest, "Name", $"Name already take");
+            if (!IsColorIdValid(createDto.Colors.ColorId))
+                throw new RestException(System.Net.HttpStatusCode.BadRequest, "ColorId", $"ColorId does not exist");
             var entity = _mapper.Map<Sunglasses>(createDto);
             entity.ImageName = FileManager.Save(createDto.ImageName, _rootPath, "uploads/mainimages/sunglasses");
             _sunglassesRepository.Add(entity);
             _sunglassesRepository.Commit();
 
             return _mapper.Map<CreatedResultDto>(entity);
+        }
+        private bool IsColorIdValid(int colorId)
+        {
+            return _colorRepository.IsExist(c => c.Id == colorId);
         }
 
         public void Edit(int id, SunglassesEditDto editDto)
@@ -71,46 +80,8 @@ namespace WarbyApp.Service.Implementations
         public List<SunglassesGetAllDto> GetAll()
         {
             var entities = _sunglassesRepository.GetQueryable(x => true, "Colors.Color").ToList();
-            var getallDto = _mapper.Map<List<SunglassesGetAllDto>>(entities);
-            var baseUrl = new UriBuilder(_httpContextAccessor.HttpContext.Request.Scheme, _httpContextAccessor.HttpContext.Request.Host.Host, _httpContextAccessor.HttpContext.Request.Host.Port ?? -1);
-            for (int i = 0; i < getallDto.Count; i++)
-            {
-                getallDto[i].ImageUrl = baseUrl + "/uploads/mainimages/sunglasses/" + entities[i].ImageName;
-                var dto = getallDto[i];
-                var entity = entities.FirstOrDefault(e => e.Id == dto.Id);
-
-                if (entity != null && entity.Colors != null)
-                {
-                    dto.Colors = entity.Colors.Select(c =>
-                    {
-                        if (c != null && c.Color != null)
-                        {
-                            return new SunglassesGetAllColorDto
-                            {
-                                ColorId = c.ColorId,
-                                Color = new ColorDto
-                                {
-                                    ColorName = c.Color.ColorName,
-                                    ColorImage = c.Color.ColorImage
-                                }
-                            };
-                        }
-                        else
-                        {
-                            return new SunglassesGetAllColorDto
-                            {
-                                ColorId = c.ColorId,
-                                Color = new ColorDto
-                                {
-                                    ColorName = "Not Color Name",
-                                    ColorImage = "Not Color Image"
-                                }
-                            };
-                        }
-                    }).ToList();
-                }
-            }
-            return getallDto;
+            
+            return _mapper.Map<List<SunglassesGetAllDto>>(entities);
         }
 
         public SunglassesGetDto GetById(int id)
@@ -118,29 +89,8 @@ namespace WarbyApp.Service.Implementations
             var entity = _sunglassesRepository.Get(x => x.Id == id, "Colors.Color");
             if (entity == null)
                 throw new RestException(System.Net.HttpStatusCode.NotFound, $"Eyeglasses not found by id:{id}");
-            var getdto = _mapper.Map<SunglassesGetDto>(entity);
-            var baseUrl = new UriBuilder(_httpContextAccessor.HttpContext.Request.Scheme, _httpContextAccessor.HttpContext.Request.Host.Host, _httpContextAccessor.HttpContext.Request.Host.Port ?? -1);
-            getdto.ImageUrl = baseUrl + "/uploads/mainimages/sunglasses/" + entity.ImageName;
-            if (entity.Colors != null)
-            {
-                getdto.Colors = entity.Colors.Select(c =>
-                {
-                    return new SunglassesGetColorDto
-                    {
-                        ColorId = c.ColorId,
-                        Color = new SunglassesGetColorDto.ColorGetDto
-                        {
-                            ColorName = c.Color.ColorName,
-                            ColorImage = c.Color.ColorImage
-                        }
-                    };
-                }).ToList();
-            }
-            else
-            {
-                getdto.Colors = new List<SunglassesGetColorDto>();
-            }
-            return getdto;
+            
+            return _mapper.Map<SunglassesGetDto>(entity);
         }
         public void Delete(int id)
         {

@@ -17,6 +17,11 @@ namespace WarbyApp.Service.Dtos.SunglassesDtos
         public decimal SalePrice { get; set; }
         public decimal DiscountPercent { get; set; }
         public IFormFile ImageName { get; set; }
+        public SunglassesCreateColorNames Colors { get; set; }
+    }
+    public class SunglassesCreateColorNames
+    {
+        public int ColorId { get; set; }
     }
     public class SunglassesCreateDtoValidator : AbstractValidator<SunglassesCreateDto>
     {
@@ -46,6 +51,7 @@ namespace WarbyApp.Service.Dtos.SunglassesDtos
                         context.AddFailure("ImageFile", "Image file must be png,jpg or jpeg");
                 }
             });
+            RuleFor(x => x.Colors.ColorId).GreaterThan(0);
         }
     }
 }

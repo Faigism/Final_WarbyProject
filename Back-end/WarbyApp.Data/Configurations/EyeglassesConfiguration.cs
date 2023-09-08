@@ -25,6 +25,10 @@ namespace WarbyApp.Data.Configurations
                 .HasMany(c => c.Colors)
                 .WithOne(e => e.Eyeglasses)
                 .HasForeignKey(ei => ei.EyeglassesId);
+            builder
+                .HasMany(ca => ca.Categories)
+                .WithOne(e => e.Eyeglasses)
+                .HasForeignKey(ei => ei.EyeglassesId);
         }
     }
 }

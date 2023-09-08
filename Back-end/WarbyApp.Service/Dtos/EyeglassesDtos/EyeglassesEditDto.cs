@@ -16,7 +16,10 @@ namespace WarbyApp.Service.Dtos.EyeglassesDtos
         public decimal SalePrice { get; set; }
         public decimal DiscountPercent { get; set; }
         public IFormFile ImageName { get; set; }
+        public List<int> ColorIdsToAdd { get; set; }
+        public List<int> ColorIdsToRemove { get; set; }
     }
+
     public class EyeglassesEditDtoValidator : AbstractValidator<EyeglassesEditDto>
     {
         public EyeglassesEditDtoValidator()

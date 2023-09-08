@@ -1,0 +1,83 @@
+﻿@model PaginatedList<Eyeglasses_VMItem>
+@{
+    ViewData["Title"] = "Index";
+    int order = (Model.PageIndex - 1) * 1;
+}
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header is-small-screen">
+    <main class="mdl-layout__content ">
+        <div class="mdl-grid ui-tables">
+            <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone">
+                <div class="mdl-card mdl-shadow--2dp">
+                    <div class="mdl-card__title">
+                        <h1 class="mdl-card__title-text">Products</h1>
+                    </div>
+                    <div><a class="btn btn-secondary" asp-action="create">Create</a></div>
+                    <div class="mdl-card__supporting-text no-padding">
+                        <table class="mdl-data-table mdl-js-data-table">
+                            <thead>
+                                <tr>
+                                    <th class="mdl-data-table__cell--non-numeric">#</th>
+                                    <th class="mdl-data-table__cell--non-numeric">Name</th>
+                                    <th class="mdl-data-table__cell--non-numeric">Material</th>
+                                    <th class="mdl-data-table__cell--non-numeric">Fiction</th>
+                                    <th class="mdl-data-table__cell--non-numeric">Cost Price</th>
+                                    <th class="mdl-data-table__cell--non-numeric">Sale Price</th>
+                                    <th class="mdl-data-table__cell--non-numeric">DiscountPercent</th>
+                                    <th class="mdl-data-table__cell--non-numeric">Image</th>
+                                    <th class="mdl-data-table__cell--non-numeric">ColorName</th>
+                                    <th class="mdl-data-table__cell--non-numeric">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.Items)
+                                {
+                                    order++;
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">@order</td>
+                                        <td class="mdl-data-table__cell--non-numeric">@item.Name</td>
+                                        <td class="mdl-data-table__cell--non-numeric">@item.Material</td>
+                                        <td class="mdl-data-table__cell--non-numeric"><span class="label label--mini color--green">Fiction</span></td>
+                                        <td class="mdl-data-table__cell--non-numeric">@item.CostPrice</td>
+                                        <td class="mdl-data-table__cell--non-numeric">@item.SalePrice</td>
+                                        <td class="mdl-data-table__cell--non-numeric">@item.DiscountPercent %</td>
+                                        <td class="mdl-data-table__cell--non-numeric">
+                                            <img width="100px" src="@item.ImageUrl"/>
+                                        </td>
+                                        <td class="mdl-data-table__cell--non-numeric">@item.ColorName</td>
+                                        @*<td class="mdl-data-table__cell--non-numeric">
+                                            <span class="label label--mini label__availability background-color--primary">1</span>
+                                            <span class="label label--mini label__availability background-color--primary">2</span>
+                                            <span class="label label--mini label__availability background-color--primary">2</span>
+                                            <span class="label label--mini label__availability background-color--primary">3</span>
+                                        </td>*@
+                                        @*<td class="mdl-data-table__cell--non-numeric"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-teal">Add to cart</button></td>*@
+                                        <td>
+                                            <a asp-action="edit" asp-route-id="@item.Id" class="btn btn-warning">Edit</a>
+                                            <a asp-action="delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <nav aria-label="..." class="text-center">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item @(Model.HasPrevious?"":"disabled")">
+                                    <a class="page-link" asp-route-page="@(Model.PageIndex - 1)">Previous</a>
+                                </li>
+                                @for (int i = 1; i <= Model.TotalPage; i++)
+                                {
+                                    <li class="page-item @(Model.PageIndex==i?"active":"")"><a class="page-link" asp-route-page="@i">@i</a></li>
+                                }
+                                <li class="page-item @(Model.HasNext?"":"disabled")">
+                                    <a class="page-link" asp-route-page="@(Model.PageIndex + 1)">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</div>
+

@@ -22,6 +22,51 @@ namespace WarbyApp.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("WarbyApp.Core.Entities.Category", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categories");
+                });
+
+            modelBuilder.Entity("WarbyApp.Core.Entities.CategoryName", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ImageName")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("CategoryNames");
+                });
+
             modelBuilder.Entity("WarbyApp.Core.Entities.Color", b =>
                 {
                     b.Property<int>("Id")
@@ -117,6 +162,21 @@ namespace WarbyApp.Data.Migrations
                     b.ToTable("Eyeglasses");
                 });
 
+            modelBuilder.Entity("WarbyApp.Core.Entities.EyeglassesCategory", b =>
+                {
+                    b.Property<int>("EyeglassesId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.HasKey("EyeglassesId", "CategoryId");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("EyeglassesCategories");
+                });
+
             modelBuilder.Entity("WarbyApp.Core.Entities.EyeglassesColor", b =>
                 {
                     b.Property<int>("EyeglassesId")
@@ -204,6 +264,21 @@ namespace WarbyApp.Data.Migrations
                     b.ToTable("Sunglasses");
                 });
 
+            modelBuilder.Entity("WarbyApp.Core.Entities.SunglassesCategory", b =>
+                {
+                    b.Property<int>("SunglassesId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.HasKey("SunglassesId", "CategoryId");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("SunglassesCategories");
+                });
+
             modelBuilder.Entity("WarbyApp.Core.Entities.SunglassesColor", b =>
                 {
                     b.Property<int>("SunglassesId")
@@ -217,6 +292,36 @@ namespace WarbyApp.Data.Migrations
                     b.HasIndex("ColorId");
 
                     b.ToTable("SunglassesColors");
+                });
+
+            modelBuilder.Entity("WarbyApp.Core.Entities.CategoryName", b =>
+                {
+                    b.HasOne("WarbyApp.Core.Entities.Category", "Category")
+                        .WithMany("CategoryNames")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("WarbyApp.Core.Entities.EyeglassesCategory", b =>
+                {
+                    b.HasOne("WarbyApp.Core.Entities.Category", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("WarbyApp.Core.Entities.Eyeglasses", "Eyeglasses")
+                        .WithMany("Categories")
+                        .HasForeignKey("EyeglassesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+
+                    b.Navigation("Eyeglasses");
                 });
 
             modelBuilder.Entity("WarbyApp.Core.Entities.EyeglassesColor", b =>
@@ -238,6 +343,25 @@ namespace WarbyApp.Data.Migrations
                     b.Navigation("Eyeglasses");
                 });
 
+            modelBuilder.Entity("WarbyApp.Core.Entities.SunglassesCategory", b =>
+                {
+                    b.HasOne("WarbyApp.Core.Entities.Category", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("WarbyApp.Core.Entities.Sunglasses", "Sunglasses")
+                        .WithMany("Categories")
+                        .HasForeignKey("SunglassesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+
+                    b.Navigation("Sunglasses");
+                });
+
             modelBuilder.Entity("WarbyApp.Core.Entities.SunglassesColor", b =>
                 {
                     b.HasOne("WarbyApp.Core.Entities.Color", "Color")
@@ -257,13 +381,22 @@ namespace WarbyApp.Data.Migrations
                     b.Navigation("Sunglasses");
                 });
 
+            modelBuilder.Entity("WarbyApp.Core.Entities.Category", b =>
+                {
+                    b.Navigation("CategoryNames");
+                });
+
             modelBuilder.Entity("WarbyApp.Core.Entities.Eyeglasses", b =>
                 {
+                    b.Navigation("Categories");
+
                     b.Navigation("Colors");
                 });
 
             modelBuilder.Entity("WarbyApp.Core.Entities.Sunglasses", b =>
                 {
+                    b.Navigation("Categories");
+
                     b.Navigation("Colors");
                 });
 #pragma warning restore 612, 618

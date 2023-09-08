@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WarbyApp.Service.Dtos.EyeglassesDtos;
 
 namespace WarbyApp.Service.Dtos.SunglassesDtos
 {
@@ -16,6 +17,12 @@ namespace WarbyApp.Service.Dtos.SunglassesDtos
         public decimal SalePrice { get; set; }
         public decimal DiscountPercent { get; set; }
         public IFormFile ImageName { get; set; }
+        public SunglassesColorEdit Colors { get; set; }
+    }
+    public class SunglassesColorEdit
+    {
+        public int ColorId { get; set; }
+        public int NewColor { get; set; }
     }
     public class SunglassesEditDtoValidator : AbstractValidator<SunglassesEditDto>
     {
@@ -45,6 +52,8 @@ namespace WarbyApp.Service.Dtos.SunglassesDtos
                         context.AddFailure("ImageFile", "Image file must be png,jpg or jpeg");
                 }
             });
+            RuleFor(x => x.Colors.ColorId).GreaterThan(0);
+            RuleFor(x => x.Colors.NewColor).GreaterThan(0);
         }
     }
 }

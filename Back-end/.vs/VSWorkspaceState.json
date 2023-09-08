@@ -1,9 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\WarbyApp.Service",
-    "\\WarbyApp.Service\\Implementations"
+    "\\WarbyApp.Api",
+    "\\WarbyApp.UI",
+    "\\WarbyApp.UI\\Areas",
+    "\\WarbyApp.UI\\Areas\\Manage",
+    "\\WarbyApp.UI\\Areas\\Manage\\Views",
+    "\\WarbyApp.UI\\Areas\\Manage\\Views\\Shared",
+    "\\WarbyApp.UI\\Views",
+    "\\WarbyApp.UI\\Views\\Home",
+    "\\WarbyApp.UI\\Views\\Shared"
   ],
-  "SelectedNode": "\\WarbyApp.Service\\Implementations\\SunglassesService.cs",
+  "SelectedNode": "\\WarbySiteApp.sln",
   "PreviewInSolutionExplorer": false
 }

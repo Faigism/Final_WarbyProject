@@ -1,0 +1,213 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\WarbyApp.UI.bundle.scp.css",
+      "PackagePath": "staticwebassets\\WarbyApp.UI.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\css\\application.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\application.min.css"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\assets\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\css\\lib\\getmdl-select.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\lib\\getmdl-select.min.css"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\css\\lib\\nv.d3.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\lib\\nv.d3.min.css"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\images\\404.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\404.svg"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\images\\Bobby.PNG",
+      "PackagePath": "staticwebassets\\assets\\images\\Bobby.PNG"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\images\\DB_16х16.png",
+      "PackagePath": "staticwebassets\\assets\\images\\DB_16х16.png"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\images\\Dark_background_1920x1080.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Dark_background_1920x1080.png"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\images\\Icon.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Icon.png"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\images\\Icon_header.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Icon_header.png"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\images\\active_marker.png",
+      "PackagePath": "staticwebassets\\assets\\images\\active_marker.png"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\images\\buffer.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\buffer.svg"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\images\\card.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\card.jpg"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\images\\cloudy_and_snow.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\cloudy_and_snow.svg"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\images\\cotoneaster.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\cotoneaster.jpg"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\images\\gina-torres.png",
+      "PackagePath": "staticwebassets\\assets\\images\\gina-torres.png"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\images\\imgo.png",
+      "PackagePath": "staticwebassets\\assets\\images\\imgo.png"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\images\\istanbul.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\istanbul.jpg"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\images\\map_target_images_sprite.png",
+      "PackagePath": "staticwebassets\\assets\\images\\map_target_images_sprite.png"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\images\\marker.png",
+      "PackagePath": "staticwebassets\\assets\\images\\marker.png"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\images\\nathan-fillion.png",
+      "PackagePath": "staticwebassets\\assets\\images\\nathan-fillion.png"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\images\\robot.png",
+      "PackagePath": "staticwebassets\\assets\\images\\robot.png"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\images\\sao_paulo.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\sao_paulo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\images\\skype.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\skype.svg"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\images\\tick-mask.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\tick-mask.svg"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\images\\tick.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\tick.svg"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\images\\tick_dark.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\tick_dark.svg"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\images\\tokyo.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\tokyo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\images\\tudyk.png",
+      "PackagePath": "staticwebassets\\assets\\images\\tudyk.png"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\images\\watch_white.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\watch_white.svg"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\images\\weather_bck.png",
+      "PackagePath": "staticwebassets\\assets\\images\\weather_bck.png"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\js\\d3.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\d3.min.js"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\js\\getmdl-select.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\getmdl-select.min.js"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\js\\layout\\layout.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\layout\\layout.min.js"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\js\\material.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\material.min.js"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\js\\nv.d3.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\nv.d3.min.js"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\js\\paginated.js",
+      "PackagePath": "staticwebassets\\assets\\js\\paginated.js"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\js\\scroll\\scroll.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\scroll\\scroll.min.js"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\js\\widgets\\charts\\discreteBarChart.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\widgets\\charts\\discreteBarChart.min.js"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\js\\widgets\\charts\\linePlusBarChart.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\widgets\\charts\\linePlusBarChart.min.js"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\js\\widgets\\charts\\stackedBarChart.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\widgets\\charts\\stackedBarChart.min.js"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\js\\widgets\\employer-form\\employer-form.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\widgets\\employer-form\\employer-form.min.js"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\js\\widgets\\line-chart\\line-charts-nvd3.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\widgets\\line-chart\\line-charts-nvd3.min.js"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\js\\widgets\\map\\maps.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\widgets\\map\\maps.min.js"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\js\\widgets\\pie-chart\\pie-charts-nvd3.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\widgets\\pie-chart\\pie-charts-nvd3.min.js"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\js\\widgets\\table\\table.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\widgets\\table\\table.min.js"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\js\\widgets\\todo\\todo.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\widgets\\todo\\todo.min.js"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.WarbyApp.UI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.WarbyApp.UI.props",
+      "PackagePath": "build\\WarbyApp.UI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.WarbyApp.UI.props",
+      "PackagePath": "buildMultiTargeting\\WarbyApp.UI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.WarbyApp.UI.props",
+      "PackagePath": "buildTransitive\\WarbyApp.UI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

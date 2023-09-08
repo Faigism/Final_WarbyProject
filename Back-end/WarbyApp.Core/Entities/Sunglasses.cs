@@ -24,5 +24,6 @@ namespace WarbyApp.Core.Entities
         public string Description2 { get; set; }
         public string ImageName { get; set; }
         public List<SunglassesColor> Colors { get; set; } = new List<SunglassesColor>();
+        public List<SunglassesCategory> Categories { get; set; }
     }
 }
