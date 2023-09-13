@@ -11,6 +11,7 @@ using WarbyApp.Data.Repositories;
 using WarbyApp.Service.Dtos.ColorDtos;
 using WarbyApp.Service.Dtos.Common;
 using WarbyApp.Service.Dtos.EyeglassesDtos;
+using WarbyApp.Service.Dtos.SunglassesDtos;
 using WarbyApp.Service.Exceptions;
 using WarbyApp.Service.Helpers;
 using WarbyApp.Service.Interfaces;
@@ -77,6 +78,14 @@ namespace WarbyApp.Service.Implementations
         {
             var entities = _colorRepository.GetQueryable(x => true).ToList();
             return _mapper.Map<List<ColorGetAllDto>>(entities);
+        }
+
+        public PaginatedListDto<ColorGetPaginatedListItemDto> GetAllPaginated(int page)
+        {
+            var query = _colorRepository.GetQueryable(x => true);
+            var entities = query.Skip((page - 1) * 4).Take(4).ToList();
+            var items = _mapper.Map<List<ColorGetPaginatedListItemDto>>(entities);
+            return new PaginatedListDto<ColorGetPaginatedListItemDto>(items, page, 4, query.Count());
         }
 
         public ColorGetDto GetById(int id)

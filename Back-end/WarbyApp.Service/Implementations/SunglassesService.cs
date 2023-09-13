@@ -10,6 +10,7 @@ using WarbyApp.Core.Entities;
 using WarbyApp.Core.Repositories;
 using WarbyApp.Data.Repositories;
 using WarbyApp.Service.Dtos.Common;
+using WarbyApp.Service.Dtos.EyeglassesDtos;
 using WarbyApp.Service.Dtos.SunglassesDtos;
 using WarbyApp.Service.Exceptions;
 using WarbyApp.Service.Helpers;
@@ -23,15 +24,13 @@ namespace WarbyApp.Service.Implementations
         private readonly ISunglassesRepository _sunglassesRepository;
         private readonly IColorRepository _colorRepository;
         private readonly IMapper _mapper;
-        private readonly IHttpContextAccessor _httpContextAccessor;
         private string _rootPath;
 
-        public SunglassesService(ISunglassesRepository sunglassesRepository, IColorRepository colorRepository, IMapper mapper, IHttpContextAccessor httpContextAccessor)
+        public SunglassesService(ISunglassesRepository sunglassesRepository, IColorRepository colorRepository, IMapper mapper)
         {
             _sunglassesRepository = sunglassesRepository;
             _colorRepository = colorRepository;
             _mapper = mapper;
-            _httpContextAccessor = httpContextAccessor;
             _rootPath = Directory.GetCurrentDirectory() + "/wwwroot";
         }
 
@@ -55,7 +54,8 @@ namespace WarbyApp.Service.Implementations
 
         public void Edit(int id, SunglassesEditDto editDto)
         {
-            var entity = _sunglassesRepository.Get(x => x.Id == id);
+            var entity = _sunglassesRepository.Get(x => x.Id == id, "Colors.Color");
+            var entity2 = _colorRepository.GetQueryable(x => true).ToList();
             if (entity == null)
                 throw new RestException(System.Net.HttpStatusCode.NotFound, $"Eyeglasses not found by id: {id}");
             if (entity.Name != editDto.Name && _sunglassesRepository.IsExist(x => x.Name == editDto.Name))
@@ -67,6 +67,52 @@ namespace WarbyApp.Service.Implementations
             entity.DiscountPercent = editDto.DiscountPercent;
             entity.ModifiedAt = DateTime.UtcNow;
             string existMainImages = null;
+            var existingColorIds = new HashSet<int>(entity2.Select(x => x.Id));
+            if (editDto.ColorIdsToAdd != null && editDto.ColorIdsToAdd.Any())
+            {
+                for (int i = 0; i < editDto.ColorIdsToAdd.Count; i++)
+                {
+                    if (existingColorIds.Contains(editDto.ColorIdsToAdd[i]))
+                    {
+                        if (!entity.Colors.Any(x => x.ColorId == editDto.ColorIdsToAdd[i]))
+                        {
+                            entity.Colors.Add(new SunglassesColor
+                            {
+                                ColorId = editDto.ColorIdsToAdd[i]
+                            });
+                        }
+                        else
+                        {
+                            throw new RestException(System.Net.HttpStatusCode.NotFound, $"Color id:{editDto.ColorIdsToAdd[i]} is now available: ");
+                        }
+                    }
+                    else
+                    {
+                        throw new RestException(System.Net.HttpStatusCode.NotFound, $"Color id:{editDto.ColorIdsToAdd[i]} is not available");
+                    }
+                }
+            }
+            if (editDto.ColorIdsToRemove != null && editDto.ColorIdsToRemove.Any())
+            {
+                for (int i = 0; i < editDto.ColorIdsToRemove.Count; i++)
+                {
+                    if (existingColorIds.Contains(editDto.ColorIdsToRemove[i]))
+                    {
+                        if (!entity.Colors.Any(x => x.ColorId == editDto.ColorIdsToRemove[i]))
+                        {
+                            throw new RestException(System.Net.HttpStatusCode.NotFound, $"Color id:{editDto.ColorIdsToRemove[i]} is not available: ");
+                        }
+                        else
+                        {
+                            entity.Colors.Remove(entity.Colors[i]);
+                        }
+                    }
+                    else
+                    {
+                        throw new RestException(System.Net.HttpStatusCode.NotFound, $"Color id:{editDto.ColorIdsToRemove[i]} is not available");
+                    }
+                }
+            }
 
             if (editDto.ImageName != null)
             {
@@ -99,6 +145,14 @@ namespace WarbyApp.Service.Implementations
                 throw new RestException(System.Net.HttpStatusCode.NotFound, $"Eyeglasses not found by id: {id}");
             _sunglassesRepository.Delete(entity);
             _sunglassesRepository.Commit();
+        }
+
+        public PaginatedListDto<SunglassesGetPaginatedListItemDto> GetAllPaginated(int page)
+        {
+            var query = _sunglassesRepository.GetQueryable(x => true);
+            var entities = query.Skip((page - 1) * 4).Take(4).ToList();
+            var items = _mapper.Map<List<SunglassesGetPaginatedListItemDto>>(entities);
+            return new PaginatedListDto<SunglassesGetPaginatedListItemDto>(items, page, 4, query.Count());
         }
     }
 }

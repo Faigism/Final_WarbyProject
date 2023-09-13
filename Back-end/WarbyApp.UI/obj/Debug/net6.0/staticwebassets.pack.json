@@ -5,6 +5,146 @@
       "PackagePath": "staticwebassets\\WarbyApp.UI.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\css\\bootstrap\\bootstrap.css",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\css\\bootstrap\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\css\\scss\\_reset.scss",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\css\\scss\\_reset.scss"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\css\\scss\\footerscss\\_footer.scss",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\css\\scss\\footerscss\\_footer.scss"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\css\\scss\\headerscss\\_header.scss",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\css\\scss\\headerscss\\_header.scss"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\css\\scss\\mainscss\\Basket\\_basket.scss",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\css\\scss\\mainscss\\Basket\\_basket.scss"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\css\\scss\\mainscss\\Index\\collaborationsec\\_collaborationsec.scss",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\css\\scss\\mainscss\\Index\\collaborationsec\\_collaborationsec.scss"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\css\\scss\\mainscss\\Index\\maintopsec\\_topsec.scss",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\css\\scss\\mainscss\\Index\\maintopsec\\_topsec.scss"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\css\\scss\\mainscss\\Index\\prescriptionsec\\_prescription.scss",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\css\\scss\\mainscss\\Index\\prescriptionsec\\_prescription.scss"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\css\\scss\\mainscss\\Index\\shopglassessec\\_shopglasses.scss",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\css\\scss\\mainscss\\Index\\shopglassessec\\_shopglasses.scss"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\css\\scss\\mainscss\\Index\\wallpapersec\\_wallpaper.scss",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\css\\scss\\mainscss\\Index\\wallpapersec\\_wallpaper.scss"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\css\\scss\\mainscss\\Quiz\\_quiz.scss",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\css\\scss\\mainscss\\Quiz\\_quiz.scss"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\css\\scss\\mainscss\\Shop\\_meneyeglasses.scss",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\css\\scss\\mainscss\\Shop\\_meneyeglasses.scss"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\css\\scss\\mainscss\\Shop\\_shopfilter.scss",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\css\\scss\\mainscss\\Shop\\_shopfilter.scss"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\css\\scss\\style.css",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\css\\scss\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\css\\scss\\style.css.map",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\css\\scss\\style.css.map"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\css\\scss\\style.scss",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\css\\scss\\style.scss"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\fonts\\static\\PlayfairDisplay-Black.ttf",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\fonts\\static\\PlayfairDisplay-Black.ttf"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\fonts\\static\\PlayfairDisplay-BlackItalic.ttf",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\fonts\\static\\PlayfairDisplay-BlackItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\fonts\\static\\PlayfairDisplay-Bold.ttf",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\fonts\\static\\PlayfairDisplay-Bold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\fonts\\static\\PlayfairDisplay-BoldItalic.ttf",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\fonts\\static\\PlayfairDisplay-BoldItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\fonts\\static\\PlayfairDisplay-ExtraBold.ttf",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\fonts\\static\\PlayfairDisplay-ExtraBold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\fonts\\static\\PlayfairDisplay-ExtraBoldItalic.ttf",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\fonts\\static\\PlayfairDisplay-ExtraBoldItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\fonts\\static\\PlayfairDisplay-Italic.ttf",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\fonts\\static\\PlayfairDisplay-Italic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\fonts\\static\\PlayfairDisplay-Medium.ttf",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\fonts\\static\\PlayfairDisplay-Medium.ttf"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\fonts\\static\\PlayfairDisplay-MediumItalic.ttf",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\fonts\\static\\PlayfairDisplay-MediumItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\fonts\\static\\PlayfairDisplay-Regular.ttf",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\fonts\\static\\PlayfairDisplay-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\fonts\\static\\PlayfairDisplay-SemiBold.ttf",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\fonts\\static\\PlayfairDisplay-SemiBold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\fonts\\static\\PlayfairDisplay-SemiBoldItalic.ttf",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\fonts\\static\\PlayfairDisplay-SemiBoldItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\js\\footerjs\\mail.js",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\js\\footerjs\\mail.js"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\js\\headerjs\\headermodal.js",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\js\\headerjs\\headermodal.js"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\js\\headerjs\\menu.js",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\js\\headerjs\\menu.js"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\js\\headerjs\\search.js",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\js\\headerjs\\search.js"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\js\\meneyeglassesjs\\eyeglasses.js",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\js\\meneyeglassesjs\\eyeglasses.js"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\js\\meneyeglassesjs\\filter.js",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\js\\meneyeglassesjs\\filter.js"
+    },
+    {
+      "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\WarbyHome\\assets\\js\\quizjs\\quiz.js",
+      "PackagePath": "staticwebassets\\WarbyHome\\assets\\js\\quizjs\\quiz.js"
+    },
+    {
       "Id": "C:\\Users\\faiqi\\OneDrive\\Desktop\\Final_Project\\Final_WarbyProject\\Back-end\\WarbyApp.UI\\wwwroot\\assets\\css\\application.min.css",
       "PackagePath": "staticwebassets\\assets\\css\\application.min.css"
     },

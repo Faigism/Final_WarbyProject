@@ -14,6 +14,7 @@ namespace WarbyApp.Service.Interfaces
         void Edit(int id, EyeglassesEditDto editDto);
         EyeglassesGetDto GetById(int id);
         List<EyeglassesGetAllDto> GetAll();
+        PaginatedListDto<EyeglassesGetPaginatedListItemDto> GetAllPaginated(int page);
         void Delete(int id);
     }
 }

@@ -27,5 +27,7 @@ namespace WarbyApp.Core.Entities
         public string ImageName { get; set; }
         public List<EyeglassesColor> Colors { get; set; } = new List<EyeglassesColor>();
         public List<EyeglassesCategory> Categories { get; set; }
+        [NotMapped]
+        public List<int> ColorIds { get; set; }
     }
 }

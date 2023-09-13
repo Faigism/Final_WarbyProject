@@ -8,7 +8,58 @@
 
   <ItemGroup>
     <Folder Include="Models\" />
-    <Folder Include="Views\Home\" />
+    <Folder Include="wwwroot\WarbyHome\assets\favicon\" />
+    <Folder Include="wwwroot\WarbyHome\assets\images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\assets\css\application.min.css" />
+    <None Include="wwwroot\assets\css\bootstrap.css" />
+    <None Include="wwwroot\assets\css\lib\getmdl-select.min.css" />
+    <None Include="wwwroot\assets\css\lib\nv.d3.min.css" />
+    <None Include="wwwroot\assets\images\404.svg" />
+    <None Include="wwwroot\assets\images\active_marker.png" />
+    <None Include="wwwroot\assets\images\Bobby.PNG" />
+    <None Include="wwwroot\assets\images\buffer.svg" />
+    <None Include="wwwroot\assets\images\card.jpg" />
+    <None Include="wwwroot\assets\images\cloudy_and_snow.svg" />
+    <None Include="wwwroot\assets\images\cotoneaster.jpg" />
+    <None Include="wwwroot\assets\images\Dark_background_1920x1080.png" />
+    <None Include="wwwroot\assets\images\DB_16х16.png" />
+    <None Include="wwwroot\assets\images\gina-torres.png" />
+    <None Include="wwwroot\assets\images\Icon.png" />
+    <None Include="wwwroot\assets\images\Icon_header.png" />
+    <None Include="wwwroot\assets\images\imgo.png" />
+    <None Include="wwwroot\assets\images\istanbul.jpg" />
+    <None Include="wwwroot\assets\images\map_target_images_sprite.png" />
+    <None Include="wwwroot\assets\images\marker.png" />
+    <None Include="wwwroot\assets\images\nathan-fillion.png" />
+    <None Include="wwwroot\assets\images\robot.png" />
+    <None Include="wwwroot\assets\images\sao_paulo.jpg" />
+    <None Include="wwwroot\assets\images\skype.svg" />
+    <None Include="wwwroot\assets\images\tick-mask.svg" />
+    <None Include="wwwroot\assets\images\tick.svg" />
+    <None Include="wwwroot\assets\images\tick_dark.svg" />
+    <None Include="wwwroot\assets\images\tokyo.jpg" />
+    <None Include="wwwroot\assets\images\tudyk.png" />
+    <None Include="wwwroot\assets\images\watch_white.svg" />
+    <None Include="wwwroot\assets\images\weather_bck.png" />
+    <None Include="wwwroot\assets\js\d3.min.js" />
+    <None Include="wwwroot\assets\js\getmdl-select.min.js" />
+    <None Include="wwwroot\assets\js\layout\layout.min.js" />
+    <None Include="wwwroot\assets\js\material.min.js" />
+    <None Include="wwwroot\assets\js\nv.d3.min.js" />
+    <None Include="wwwroot\assets\js\paginated.js" />
+    <None Include="wwwroot\assets\js\scroll\scroll.min.js" />
+    <None Include="wwwroot\assets\js\widgets\charts\discreteBarChart.min.js" />
+    <None Include="wwwroot\assets\js\widgets\charts\linePlusBarChart.min.js" />
+    <None Include="wwwroot\assets\js\widgets\charts\stackedBarChart.min.js" />
+    <None Include="wwwroot\assets\js\widgets\employer-form\employer-form.min.js" />
+    <None Include="wwwroot\assets\js\widgets\line-chart\line-charts-nvd3.min.js" />
+    <None Include="wwwroot\assets\js\widgets\map\maps.min.js" />
+    <None Include="wwwroot\assets\js\widgets\pie-chart\pie-charts-nvd3.min.js" />
+    <None Include="wwwroot\assets\js\widgets\table\table.min.js" />
+    <None Include="wwwroot\assets\js\widgets\todo\todo.min.js" />
   </ItemGroup>
 
   <ItemGroup>

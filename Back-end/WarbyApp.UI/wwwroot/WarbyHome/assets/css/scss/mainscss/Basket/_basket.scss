@@ -1,0 +1,106 @@
+main{
+    margin: 0 auto;
+    flex: 1 0 auto;
+    min-height: 240px;
+    outline: none;
+    section{
+        width: 100%;
+        .basketsec{
+            background-color: #fff;
+            width: 100%;
+            .basketsec2{
+                .baskettop{
+                    text-align: center;
+                    margin-bottom: 60px;
+                    margin-top: 60px;
+                    justify-content: center;
+                    display: flex;
+                    .baskettop2{
+                        h1{
+                            margin: 0;
+                            color: #414B56;
+                            font-weight: 600;
+                            letter-spacing: 0px;
+                            margin-bottom: 7px;
+                            font-family: fairfontregular;
+                        }
+                        p{
+                            margin: 0;
+                            color: #676F78;
+                            font-weight: 400;
+                            letter-spacing: 0px;
+                            margin-bottom: 32px;
+                        }
+                        div{
+                            display: inline-grid;
+                            grid-gap: 12px;
+                            width: 100%;
+                            margin-bottom: 0px;
+                            :hover{
+                                border-color: rgba(103, 111, 120, 1);
+                            }
+                            a{
+                                margin-bottom: initial;
+                                display: inline-flex;
+                                border: 1px solid #A1A4A6;
+                                border-radius: 100px;
+                                color: #414B56;
+                                background-color: transparent;
+                                text-shadow: none;
+                                outline: 0;
+                                white-space: nowrap;
+                                height: 48px;
+                                padding: 13px 24px;
+                                font-size: 16px;
+                                font-weight: 600;
+                                min-width: initial;
+                                line-height: normal;
+                                align-items: center;
+                                justify-content: center;
+                                transition: 0.2s cubic-bezier(0.25, 0, 0.35, 0.95);
+                            }
+                        }
+                    }
+                }
+                .basketbtm{
+                    text-align: center;
+                    padding-bottom: 60px;
+                    padding-top: 60px;
+                    background-color: #f8f8f8;
+                    h1{
+                        margin: 0;
+                        color: #414B56;
+                        font-weight: 600;
+                        letter-spacing: 0px;
+                        font-family: fairfontregular;
+                    }
+                    .basketbtm2{
+                        .basketbtm3{
+                            display: block;
+                            div{
+                                display: inline-block;
+                                vertical-align: top;
+                                img{
+                                    margin-bottom: 24px;
+                                    max-width: 100%;
+                                }
+                                p{
+                                    &:first-of-type{
+                                        margin: 0;
+                                        font-weight: 600;
+                                        color: #414B56;
+                                    }
+                                    margin: 0;
+                                    color: #676F78;
+                                    font-weight: 400;
+                                    letter-spacing: 0px;
+                                    margin-bottom: 8px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -9,7 +9,6 @@
 @import "../scss/mainscss/Basket/basket";
 @import "../scss/mainscss/Shop/meneyeglasses";
 @import "../scss/mainscss/Quiz/quiz";
-@import "../scss/mainscss/Shop/shopfilter";
 
 @media (min-width: 1200px) {
     // indexpage start
@@ -1096,29 +1095,18 @@
                                         .btnbutton{
                                             gap: 12px;
                                             button{
-                                                width: 32px;
-                                                height: 18px;
-                                                padding: 0px;
                                                 background-color: rgba(225, 229, 230, 1);
-                                                border-radius: 100px;
-                                                position: relative;
-                                                border: none;
-                                                transition: 0.2s cubic-bezier(0.25, 0, 0.35, 0.95);
-                                                will-change: color;
-                                                outline-offset: 2px;
                                                 span{
-                                                    display: block;
-                                                    width: 16px;
-                                                    height: 16px;
-                                                    background-color: rgba(255, 255, 255, 1);
-                                                    border-radius: 100px;
-                                                    box-shadow: 0px 0px 4px 0px #414b561f;
-                                                    transition: 0.2s cubic-bezier(0.25, 0, 0.35, 0.95);
-                                                    position: absolute;
-                                                    top: 1px;
-                                                    left: 0px;
                                                     transform: translateX(1px);
-                                                    will-change: transform;
+                                                }
+                                            }
+                                        }
+                                        .btnbutton2{
+                                            gap: 12px;
+                                            button{
+                                                background-color: rgba(0, 110, 165, 1);
+                                                span{
+                                                    transform: translateX(calc(100% - 1px));
                                                 }
                                             }
                                         }
@@ -1179,10 +1167,10 @@
                                         padding: 0px;
                                         div{
                                             padding-right: 8px;
-                                        }
-                                        span{
-                                            font-size: 14px;
-                                            line-height: 20px;
+                                            span{
+                                                font-size: 14px;
+                                                line-height: 20px;
+                                            }
                                         }
                                     }
                                 }
@@ -1283,6 +1271,9 @@
                                             margin: 0px;
                                             padding: 0px;
                                             position: relative;
+                                            :hover{
+                                                border: 1px solid rgb(178, 176, 176);
+                                            }
                                             input{
                                                 padding: 0;
                                                 height: 0px;
@@ -1302,6 +1293,9 @@
                                                 justify-content: center;
                                                 align-items: center;
                                                 cursor: pointer;
+                                                :hover{
+                                                    border: none;
+                                                }
                                                 div{
                                                     span{
                                                         font-size: 14px;
@@ -1319,7 +1313,6 @@
                                                     display: flex;
                                                     flex-direction: column;
                                                     align-items: center;
-                                                    gap: 16px;
                                                     padding: 24px 16px;
                                                     width: 100%;
                                                     img{
@@ -1332,8 +1325,6 @@
                                                     align-items: center;
                                                     justify-content: space-between;
                                                     padding: 0px 0px 0px 32px;
-                                                    gap: 12px;
-                                                    width: 100%;
                                                     div{
                                                         width: 100%;
                                                         max-width: 120px;
@@ -1450,6 +1441,48 @@
                                     height: 20px;
                                     background-color: rgba(225, 229, 230, 1);
                                     margin: 0px 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .eyeglassessearch{
+                .hdrsearch-in2{
+                    .hdrsearch-in3{
+                        .hdrsearch-in4{
+                            column-gap: 24px;
+                            grid-template-columns: repeat(12, 1fr);
+                            margin: 0px 48px;
+                            .hdrsearch-in5{
+                                grid-column: 1 / 13;
+                                .hdrsearch-in6{
+                                    .in6search{
+                                        padding-top: 60px;
+                                        .in6search2{
+                                            text-align: left;
+                                            .in6search3{
+                                                p{
+                                                    font-size: 18px;
+                                                    line-height: 28px;
+                                                }
+                                                .hdrsearch-in4{
+                                                    .hdrsearch-in5{
+                                                        grid-column: 1 / 13;
+                                                        .hdrsearch-in6{
+                                                            position: relative;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        input{
+                                            font-size: 55px;
+                                            font-weight: 400;
+                                            letter-spacing: 0px;
+                                            line-height: 61px;
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -2750,29 +2783,18 @@
                                         .btnbutton{
                                             gap: 12px;
                                             button{
-                                                width: 32px;
-                                                height: 18px;
-                                                padding: 0px;
-                                                background-color: 225 229 230 1;
-                                                border-radius: 100px;
-                                                position: relative;
-                                                border: none;
-                                                transition: 0.2s cubic-bezier(0.25, 0, 0.35, 0.95);
-                                                will-change: color;
-                                                outline-offset: 2px;
+                                                background-color: rgba(225, 229, 230, 1);
                                                 span{
-                                                    display: block;
-                                                    width: 16px;
-                                                    height: 16px;
-                                                    background-color: rgba(255, 255, 255, 1);
-                                                    border-radius: 100px;
-                                                    box-shadow: 0px 0px 4px 0px #414b561f;
-                                                    transition: 0.2s cubic-bezier(0.25, 0, 0.35, 0.95);
-                                                    position: absolute;
-                                                    top: 1px;
-                                                    left: 0px;
                                                     transform: translateX(1px);
-                                                    will-change: transform;
+                                                }
+                                            }
+                                        }
+                                        .btnbutton2{
+                                            gap: 12px;
+                                            button{
+                                                background-color: rgba(0, 110, 165, 1);
+                                                span{
+                                                    transform: translateX(calc(100% - 1px));
                                                 }
                                             }
                                         }
@@ -4422,29 +4444,20 @@
                                             align-items: center;
                                             gap: 12px;
                                             button{
-                                                width: 32px;
-                                                height: 18px;
-                                                padding: 0px;
-                                                background-color: 225 229 230 1;
-                                                border-radius: 100px;
-                                                position: relative;
-                                                border: none;
-                                                transition: 0.2s cubic-bezier(0.25, 0, 0.35, 0.95);
-                                                will-change: color;
-                                                outline-offset: 2px;
+                                                background-color: rgba(225, 229, 230, 1);
                                                 span{
-                                                    display: block;
-                                                    width: 16px;
-                                                    height: 16px;
-                                                    background-color: rgba(255, 255, 255, 1);
-                                                    border-radius: 100px;
-                                                    box-shadow: 0px 0px 4px 0px #414b561f;
-                                                    transition: 0.2s cubic-bezier(0.25, 0, 0.35, 0.95);
-                                                    position: absolute;
-                                                    top: 1px;
-                                                    left: 0px;
                                                     transform: translateX(1px);
-                                                    will-change: transform;
+                                                }
+                                            }
+                                        }
+                                        .btnbutton2{
+                                            display: flex;
+                                            align-items: center;
+                                            gap: 12px;
+                                            button{
+                                                background-color: rgba(0, 110, 165, 1);
+                                                span{
+                                                    transform: translateX(calc(100% - 1px));
                                                 }
                                             }
                                         }

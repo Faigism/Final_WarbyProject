@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ using WarbyApp.Data.Configurations;
 
 namespace WarbyApp.Data
 {
-    public class WarbyAppDbContext:DbContext
+    public class WarbyAppDbContext:IdentityDbContext
     {
         public WarbyAppDbContext(DbContextOptions<WarbyAppDbContext> options):base(options) { }
         public DbSet<Eyeglasses> Eyeglasses { get; set; }
@@ -21,6 +22,7 @@ namespace WarbyApp.Data
         public DbSet<EyeglassesCategory> EyeglassesCategories { get; set; }
         public DbSet<SunglassesCategory> SunglassesCategories { get; set; }
         public DbSet<CategoryName> CategoryNames { get; set; }
+        public DbSet<AppUser> AppUsers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

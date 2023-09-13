@@ -1,10 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using WarbyApp.Core.Entities;
 
 namespace WarbyApp.UI.ViewModels
 {
     public class EyeglassesEdit_VM
     {
-        public int ColorId { get; set; }
         [Required]
         [MaxLength(35)]
         [MinLength(2)]
@@ -26,6 +26,7 @@ namespace WarbyApp.UI.ViewModels
         public decimal DiscountPercent { get; set; }
         [Required]
         public IFormFile ImageFile { get; set; }
+        public List<EyeglassesColor> Colors { get; set; }
     }
     public class NotGreaterThanCostPriceAttribute : ValidationAttribute
     {

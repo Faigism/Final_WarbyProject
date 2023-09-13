@@ -15,6 +15,7 @@ namespace WarbyApp.Service.Interfaces
         void Edit(int id, ColorEditDto editDto);
         ColorGetDto GetById(int id);
         List<ColorGetAllDto> GetAll();
+        PaginatedListDto<ColorGetPaginatedListItemDto> GetAllPaginated(int page);
         void Delete(int id);
     }
 }

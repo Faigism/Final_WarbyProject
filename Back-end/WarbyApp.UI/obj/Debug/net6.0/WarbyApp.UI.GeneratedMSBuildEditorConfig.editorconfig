@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\faiqi\OneDrive\Desktop\Final_Project\Final_WarbyProject\Back-end\WarbyApp.UI
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/faiqi/OneDrive/Desktop/Final_Project/Final_WarbyProject/Back-end/WarbyApp.UI/Areas/Manage/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEFjY291bnRcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/faiqi/OneDrive/Desktop/Final_Project/Final_WarbyProject/Back-end/WarbyApp.UI/Areas/Manage/Views/Color/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXENvbG9yXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -48,6 +52,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFNoYXJlZFxFcnJvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/faiqi/OneDrive/Desktop/Final_Project/Final_WarbyProject/Back-end/WarbyApp.UI/Areas/Manage/Views/Shared/_AccountLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFNoYXJlZFxfQWNjb3VudExheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/faiqi/OneDrive/Desktop/Final_Project/Final_WarbyProject/Back-end/WarbyApp.UI/Areas/Manage/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -56,12 +64,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/faiqi/OneDrive/Desktop/Final_Project/Final_WarbyProject/Back-end/WarbyApp.UI/Views/Account/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+[C:/Users/faiqi/OneDrive/Desktop/Final_Project/Final_WarbyProject/Back-end/WarbyApp.UI/Views/Eyeglasses/Men.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXllZ2xhc3Nlc1xNZW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/faiqi/OneDrive/Desktop/Final_Project/Final_WarbyProject/Back-end/WarbyApp.UI/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+[C:/Users/faiqi/OneDrive/Desktop/Final_Project/Final_WarbyProject/Back-end/WarbyApp.UI/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/faiqi/OneDrive/Desktop/Final_Project/Final_WarbyProject/Back-end/WarbyApp.UI/Views/Shared/_WarbyIndexLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9XYXJieUluZGV4TGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/faiqi/OneDrive/Desktop/Final_Project/Final_WarbyProject/Back-end/WarbyApp.UI/Views/_ViewImports.cshtml]

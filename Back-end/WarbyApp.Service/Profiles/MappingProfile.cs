@@ -66,6 +66,8 @@ namespace WarbyApp.Service.Profiles
                     ColorName = src.Color.ColorName,
                     ColorImage = src.Color.ColorImage
                 }));
+            CreateMap<Eyeglasses, EyeglassesGetPaginatedListItemDto>()
+                .ForMember(x => x.ImageUrl, m => m.MapFrom(s => baseUrl + "/uploads/mainimages/eyeglasses/" + s.ImageName));
 
             CreateMap<Sunglasses, CreatedResultDto>();
             CreateMap<SunglassesCreateDto, Sunglasses>();
@@ -87,7 +89,6 @@ namespace WarbyApp.Service.Profiles
                      ColorName = src.Color.ColorName,
                      ColorImage = src.Color.ColorImage
                  }));
-
             CreateMap<Sunglasses, SunglassesGetAllDto>()
                 .ForMember(x => x.ImageUrl, m => m.MapFrom(s => baseUrl + "/uploads/mainimages/sunglasses/" + s.ImageName))
                 .ForMember(x => x.Colors, a => a.MapFrom(src =>
@@ -100,19 +101,21 @@ namespace WarbyApp.Service.Profiles
                         ColorImage = baseUrl + "/uploads/colorimages/" + c.Color.ColorImage
                     }
                 }).ToList()));
-
             CreateMap<SunglassesColor, SunglassesGetAllColorDto>()
                 .ForMember(c => c.Color, opt => opt.MapFrom(src => new SunglassesGetAllColorDto.ColorDto
                 {
                     ColorName = src.Color.ColorName,
                     ColorImage = src.Color.ColorImage
                 }));
+            CreateMap<Sunglasses, SunglassesGetPaginatedListItemDto>();
 
             CreateMap<Color, CreatedResultDto>();
             CreateMap<ColorCreateDto, Color>();
             CreateMap<Color, ColorGetAllDto>()
                 .ForMember(x => x.ColorImage, m => m.MapFrom(s => baseUrl + "/uploads/colorimages/" + s.ColorImage));
             CreateMap<Color, ColorGetDto>()
+                .ForMember(x => x.ColorImage, m => m.MapFrom(s => baseUrl + "/uploads/colorimages/" + s.ColorImage));
+            CreateMap<Color, ColorGetPaginatedListItemDto>()
                 .ForMember(x => x.ColorImage, m => m.MapFrom(s => baseUrl + "/uploads/colorimages/" + s.ColorImage));
         }
     }

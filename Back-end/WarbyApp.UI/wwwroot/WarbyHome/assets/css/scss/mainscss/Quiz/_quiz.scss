@@ -1,0 +1,177 @@
+.quizsec{
+    display: flex;
+    position: relative;
+    outline: none;
+    .quizall{
+        width: 100%;
+        .quizall2{
+            background-color: #eff3f5;
+            .quizall3{
+                text-align: center;
+                .quiztop{
+                    max-width: 1440px;
+                    text-align: center;
+                    padding-left: 18px;
+                    padding-bottom: 30px;
+                    padding-right: 18px;
+                    padding-top: 48px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    .quiztoptext{
+                        h2{
+                            margin-bottom: 12px;
+                            margin-top: 0;
+                            font-weight: 600;
+                            line-height: calc(1em + 6px);
+                            font-family: fairfontregular;
+                            color: #414b56;
+                        }
+                        p{
+                            margin-bottom: 30px;
+                            color: #676f78;
+                        }
+                        .quiztopbtn{
+                            width: 216px;
+                            margin: 0 auto;
+                            div{
+                                grid-auto-flow: column;
+                                grid-auto-columns: 1fr;
+                                width: 100%;
+                                display: inline-grid;
+                                gap: 12px;
+                                margin-bottom: 0px;
+                                button{
+                                    min-width: unset;
+                                    display: inline-flex;
+                                    appearance: none;
+                                    border-radius: 1px;
+                                    transition: background-color 0.2s cubic-bezier(0.25, 0, 0.35, 0.95) 0s, color 0.2s cubic-bezier(0.25, 0, 0.35, 0.95) 0s;
+                                    white-space: nowrap;
+                                    height: 48px;
+                                    padding: 6px 16px;
+                                    outline: 0px;
+                                    font-size: 16px;
+                                    font-weight: 600;
+                                    line-height: normal;
+                                    align-items: center;
+                                    justify-content: center;
+                                    color: rgba(255, 255, 255);
+                                    background: rgba(0, 110, 165);
+                                    border: 1px solid rgba(0, 110, 165);
+                                    margin-bottom: 0px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .quizbtm{
+                    max-width: 1440px;
+                    text-align: center;
+                    margin-left: auto;
+                    margin-right: auto;
+                    .quizbtmsec{
+                        h3{
+                            margin-top: 0;
+                            font-weight: 600;
+                            line-height: calc(1em + 6px);
+                            font-family: fairfontregular;
+                            color: #414b56;
+                        }
+                        .quizbtmsecall{
+                            .btmsec{
+                                text-align: left;
+                                position: relative;
+                                div{
+                                    padding: 30px;
+                                    position: absolute;
+                                    text-align: left;
+                                    .toptxt{
+                                        text-transform: uppercase;
+                                        margin-top: 0;
+                                        letter-spacing: 2.5px;
+                                        font-size: 12px;
+                                        font-weight: 600;
+                                        color: #414b56;
+                                    }
+                                    .btmtxt{
+                                        margin: 0;
+                                        font-weight: 600;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .quizbtmtext{
+                    background-color: #fff;
+                    .textall{
+                        max-width: 1440px;
+                        text-align: center;
+                        margin-right: auto;
+                        margin-left: auto;
+                        font-weight: 600;
+                        position: relative;
+                        overflow: hidden;
+                        .text1{
+                            position: relative;
+                            display: block;
+                            transition: .4s ease-in-out .4s;
+                            div{
+                                cite{
+                                    font-style: normal;
+                                    color: #676f78;
+                                    text-transform: uppercase;
+                                    margin-bottom: 12px;
+                                    letter-spacing: 2.5px;
+                                    font-size: 12px;
+                                    font-weight: 600;
+                                    span{
+                                        height: 15px;
+                                        border-color: #e4e6e8;
+                                        vertical-align: middle;
+                                        margin-left: 12px;
+                                        margin-right: 8px;
+                                        display: inline-block;
+                                        border-left-width: 1px;
+                                        border-left-style: solid;
+                                    }
+                                }
+                            }
+                            
+                        }
+                        .text2{
+                            position: absolute;
+                            transition: .4s ease-in-out .4s;
+                            cite{
+                                font-style: normal;
+                                color: #676f78;
+                                text-transform: uppercase;
+                                margin-bottom: 12px;
+                                letter-spacing: 2.5px;
+                                font-size: 12px;
+                                font-weight: 600;
+                                span{
+                                    height: 15px;
+                                    border-color: #e4e6e8;
+                                    vertical-align: middle;
+                                    margin-left: 12px;
+                                    margin-right: 8px;
+                                    display: inline-block;
+                                    border-left-width: 1px;
+                                    border-left-style: solid;
+                                }
+                            }
+                            h3{
+                                line-height: calc(1em + 6px);
+                                color: #414b56;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

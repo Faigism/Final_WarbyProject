@@ -18,6 +18,9 @@ using System.Reflection;
 using WarbyApp.Api.Services;
 using AutoMapper;
 using Swashbuckle.AspNetCore.SwaggerGen;
+using WarbyApp.Core.Entities;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,22 +36,19 @@ builder.Services.AddControllers().ConfigureApiBehaviorOptions(options =>
     };
 });
 
+builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
+{
+    opt.Password.RequireNonAlphanumeric = false;
+    opt.Password.RequiredLength = 8;
+}).AddDefaultTokenProviders().AddEntityFrameworkStores<WarbyAppDbContext>();
 
-
-
-//builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
-//{
-//    opt.Password.RequireNonAlphanumeric = false;
-//    opt.Password.RequiredLength = 8;
-//}).AddDefaultTokenProviders().AddEntityFrameworkStores<WarbyAppDbContext>();
-
-//// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 //builder.Services.AddEndpointsApiExplorer();
 //builder.Services.AddSwaggerGen(c =>
 //{
 //    c.SwaggerDoc("v1", new OpenApiInfo
 //    {
-//        Title = "Ahop App API",
+//        Title = "Shop App API",
 //        Version = "v1",
 //        Description = "An API to perform e-commerse operations",
 //    });
@@ -57,29 +57,7 @@ builder.Services.AddControllers().ConfigureApiBehaviorOptions(options =>
 //    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
 //    c.IncludeXmlComments(xmlPath);
 
-//    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-//    {
-//        In = ParameterLocation.Header,
-//        Description = "Please enter token",
-//        Name = "Authorization",
-//        Type = SecuritySchemeType.Http,
-//        BearerFormat = "JWT",
-//        Scheme = "bearer"
-//    });
-//    c.AddSecurityRequirement(new OpenApiSecurityRequirement
-//    {
-//        {
-//            new OpenApiSecurityScheme
-//            {
-//                Reference = new OpenApiReference
-//                {
-//                    Type=ReferenceType.SecurityScheme,
-//                    Id="Bearer"
-//                }
-//            },
-//            new string[]{}
-//        }
-//    });
+//    
 //});
 
 
@@ -102,6 +80,29 @@ builder.Services.AddSwaggerGen(c =>
     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
     c.IncludeXmlComments(xmlPath);
 
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        In = ParameterLocation.Header,
+        Description = "Please enter token",
+        Name = "Authorization",
+        Type = SecuritySchemeType.Http,
+        BearerFormat = "JWT",
+        Scheme = "bearer"
+    });
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type=ReferenceType.SecurityScheme,
+                    Id="Bearer"
+                }
+            },
+            new string[]{}
+        }
+    });
 });
 
 
@@ -119,7 +120,7 @@ builder.Services.AddScoped<ISunglassesRepository, SunglassesRepository>();
 builder.Services.AddScoped<ISunglassesService, SunglassesService>();
 builder.Services.AddScoped<IColorRepository, ColorRepository>();
 builder.Services.AddScoped<IColorService, ColorService>();
-//builder.Services.AddScoped<JwtService>();
+builder.Services.AddScoped<JwtService>();
 
 builder.Services.AddHttpContextAccessor();
 
@@ -128,6 +129,21 @@ builder.Services.AddScoped(provider =>
     {
         opt.AddProfile(new MappingProfile(provider.GetService<IHttpContextAccessor>()));
     }).CreateMapper());
+
+builder.Services.AddAuthentication(opt =>
+{
+    opt.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+    opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(opt =>
+{
+    opt.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+    {
+        ValidAudience = builder.Configuration.GetSection("JWT:Audience").Value,
+        ValidIssuer = builder.Configuration.GetSection("JWT:Issuer").Value,
+        IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(builder.Configuration.GetSection("JWT:Secret").Value))
+    };
+});
 
 var app = builder.Build();
 

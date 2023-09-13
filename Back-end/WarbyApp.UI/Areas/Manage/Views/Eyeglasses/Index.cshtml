@@ -43,7 +43,16 @@
                                         <td class="mdl-data-table__cell--non-numeric">
                                             <img width="100px" src="@item.ImageUrl"/>
                                         </td>
-                                        <td class="mdl-data-table__cell--non-numeric">@item.ColorName</td>
+                                        <td class="mdl-data-table__cell--non-numeric">
+                                            @foreach (var item2 in item.Colors)
+                                            {
+                                                <span class="mdl-data-table__cell--non-numeric">@item2.Color.ColorName
+                                                    <img width="20px" src="@item2.Color.ColorImage"/>
+                                                </span>
+
+                                                <br />
+                                            }
+                                        </td>
                                         @*<td class="mdl-data-table__cell--non-numeric">
                                             <span class="label label--mini label__availability background-color--primary">1</span>
                                             <span class="label label--mini label__availability background-color--primary">2</span>

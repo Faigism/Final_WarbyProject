@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Org.BouncyCastle.Math.EC.Rfc7748;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -25,15 +26,13 @@ namespace WarbyApp.Service.Implementations
         private readonly IEyeglassesRepository _eyeglassesRepository;
         private readonly IColorRepository _colorRepository;
         private readonly IMapper _mapper;
-        private readonly IHttpContextAccessor _httpContextAccessor;
         private string _rootPath;
 
-        public EyeglassesService(IEyeglassesRepository eyeglassesRepository, IColorRepository colorRepository, IMapper mapper, IHttpContextAccessor httpContextAccessor)
+        public EyeglassesService(IEyeglassesRepository eyeglassesRepository, IColorRepository colorRepository, IMapper mapper)
         {
             _eyeglassesRepository = eyeglassesRepository;
             _colorRepository = colorRepository;
             _mapper = mapper;
-            _httpContextAccessor = httpContextAccessor;
             _rootPath = Directory.GetCurrentDirectory() + "/wwwroot";
         }
 
@@ -69,9 +68,9 @@ namespace WarbyApp.Service.Implementations
             entity.SalePrice = editDto.SalePrice;
             entity.DiscountPercent = editDto.DiscountPercent;
             entity.ModifiedAt = DateTime.UtcNow;
+            var existingColorIds = new HashSet<int>(entity2.Select(x => x.Id));
             if (editDto.ColorIdsToAdd != null && editDto.ColorIdsToAdd.Any())
             {
-                var existingColorIds = entity2.Select(x => x.Id);
                 for (int i = 0; i < editDto.ColorIdsToAdd.Count; i++)
                 {
                     if (existingColorIds.Contains(editDto.ColorIdsToAdd[i]))
@@ -96,16 +95,22 @@ namespace WarbyApp.Service.Implementations
             }
             if (editDto.ColorIdsToRemove != null && editDto.ColorIdsToRemove.Any())
             {
-                for (int i = 0; i < entity.Colors.Count; i++)
+                for (int i = 0; i < editDto.ColorIdsToRemove.Count; i++)
                 {
-                    var colorEntityToRemove = entity.Colors[i];
-                    if (editDto.ColorIdsToRemove.Contains(colorEntityToRemove.ColorId))
+                    if (existingColorIds.Contains(editDto.ColorIdsToRemove[i]))
                     {
-                        entity.Colors.Remove(colorEntityToRemove);
+                        if (!entity.Colors.Any(x => x.ColorId == editDto.ColorIdsToRemove[i]))
+                        {
+                            throw new RestException(System.Net.HttpStatusCode.NotFound, $"Color id:{editDto.ColorIdsToRemove[i]} is not available: ");
+                        }
+                        else
+                        {
+                            entity.Colors.Remove(entity.Colors[i]);
+                        }
                     }
                     else
                     {
-                        throw new RestException(System.Net.HttpStatusCode.NotFound, $"The id you are looking for is incorrect. Available Color ids of this product: {i}");
+                        throw new RestException(System.Net.HttpStatusCode.NotFound, $"Color id:{editDto.ColorIdsToRemove[i]} is not available");
                     }
                 }
             }
@@ -123,7 +128,6 @@ namespace WarbyApp.Service.Implementations
         public List<EyeglassesGetAllDto> GetAll()
         {
             var entities = _eyeglassesRepository.GetQueryable(x => true, "Colors.Color").ToList();
-
             return _mapper.Map<List<EyeglassesGetAllDto>>(entities);
         }
 
@@ -132,7 +136,6 @@ namespace WarbyApp.Service.Implementations
             var entity = _eyeglassesRepository.Get(x => x.Id == id, "Colors.Color");
             if (entity == null)
                 throw new RestException(System.Net.HttpStatusCode.NotFound, $"Eyeglasses not found by id:{id}");
-            
             return _mapper.Map<EyeglassesGetDto>(entity);
         }
         public void Delete(int id)
@@ -142,6 +145,14 @@ namespace WarbyApp.Service.Implementations
                 throw new RestException(System.Net.HttpStatusCode.NotFound, $"Eyeglasses not found by id: {id}");
             _eyeglassesRepository.Delete(entity);
             _eyeglassesRepository.Commit();
+        }
+
+        public PaginatedListDto<EyeglassesGetPaginatedListItemDto> GetAllPaginated(int page)
+        {
+            var query = _eyeglassesRepository.GetQueryable(x => true, "Colors.Color");
+            var entities = query.Skip((page - 1) * 4).Take(4).ToList();
+            var items = _mapper.Map<List<EyeglassesGetPaginatedListItemDto>>(entities);
+            return new PaginatedListDto<EyeglassesGetPaginatedListItemDto>(items, page, 4, query.Count());
         }
     }
 }

@@ -1,12 +1,13 @@
-﻿@model EyeglassesEdit_VM
+﻿@using WarbyApp.Core.Entities;
+@model Eyeglasses 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Edit";
 }
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
     <main class="mdl-layout__content mdl-color--grey-100">
         <div class="mdl-card mdl-shadow--2dp employer-form" action="#">
             <div class="mdl-card__title">
-                <h2>Product Create Form</h2>
+                <h2>Product Edit Form</h2>
                 <div class="mdl-card__subtitle">Please complete the form</div>
             </div>
 
@@ -46,14 +47,20 @@
 
                             </div>
                             <div class="mdl-grid">
-                                <label asp-for="ColorId">Color</label>
-                                <select class="form-control" asp-for="ColorId" asp-items="new SelectList(ViewBag.Colors,nameof(Color_VMItem.Id),nameof(Color_VMItem.ColorName),nameof(Color_VMItem.ColorImage))"></select>
+                                <label asp-for="ColorIds">Color</label>
+                                <select class="form-control" asp-for="ColorIds" asp-items="new SelectList(ViewBag.Colors,nameof(Color_VMItem.Id),nameof(Color_VMItem.ColorName))"></select>
+                                @*<label asp-for="Colors">Color</label>
+                                <select class="form-control" asp-for="Colors">
+                                    @foreach (var colorItem in Model.Colors)
+                                    {
+                                        <option value="@colorItem.Color.ColorName")>@colorItem.Color.ColorName</option>
+                                    }
+                                </select>*@
                             </div>
                         </div>
                         <div class="mdl-grid">
-                            <label class="mdl-textfield__label" asp-for="ImageFile">ImageFile</label>
-                            <input class="mdl-textfield__input" asp-for="ImageFile">
-                            <span class="text-danger" asp-validation-for="ImageFile"></span>
+                            <input class="mdl-textfield__input" asp-for="ImageName">
+                            <span class="text-danger" asp-validation-for="ImageName"></span>
                         </div>
                     </div>
                     <div class="form__action">

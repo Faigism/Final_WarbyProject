@@ -105,3 +105,19 @@ elements.filterwebnames.forEach((filterwebname, index) => {
     });
 });
 
+//Available for Home Try-On
+let availableTryOn = document.querySelector('.eyefilter .btn1 .btnall');
+let tryOnBtn = document.querySelector('.filtercoll2 .btn1 .btnall .btnbutton');
+let isBackgroundColor = true;
+availableTryOn.addEventListener('click', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    if (isBackgroundColor) {
+        tryOnBtn.classList.remove('btnbutton');
+        tryOnBtn.classList.add('btnbutton2');
+    } else {
+        tryOnBtn.classList.add('btnbutton');
+        tryOnBtn.classList.remove('btnbutton2');
+    }
+    isBackgroundColor = !isBackgroundColor;
+});

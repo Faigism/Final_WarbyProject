@@ -53,6 +53,16 @@
     transform: translateY(0%);
   }
 }
+@keyframes k-fbrPVi {
+  0% {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 
 header {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -1521,9 +1531,33 @@ main section .basketsec .basketsec2 .basketbtm .basketbtm2 .basketbtm3 div p:fir
   align-items: center;
   cursor: pointer;
 }
-.menseyeglasses .eyefilter .filterall .filtercoll .filtercoll2 .filter .filterbtn .btn1 .btnall .btnbutton {
+.menseyeglasses .eyefilter .filterall .filtercoll .filtercoll2 .filter .filterbtn .btn1 .btnall .btnbutton, .menseyeglasses .eyefilter .filterall .filtercoll .filtercoll2 .filter .filterbtn .btn1 .btnall .btnbutton2 {
   display: flex;
   align-items: center;
+}
+.menseyeglasses .eyefilter .filterall .filtercoll .filtercoll2 .filter .filterbtn .btn1 .btnall .btnbutton button, .menseyeglasses .eyefilter .filterall .filtercoll .filtercoll2 .filter .filterbtn .btn1 .btnall .btnbutton2 button {
+  width: 32px;
+  height: 18px;
+  padding: 0px;
+  border-radius: 100px;
+  position: relative;
+  border: none;
+  transition: 0.2s cubic-bezier(0.25, 0, 0.35, 0.95);
+  will-change: color;
+  outline-offset: 2px;
+}
+.menseyeglasses .eyefilter .filterall .filtercoll .filtercoll2 .filter .filterbtn .btn1 .btnall .btnbutton button span, .menseyeglasses .eyefilter .filterall .filtercoll .filtercoll2 .filter .filterbtn .btn1 .btnall .btnbutton2 button span {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 100px;
+  box-shadow: 0px 0px 4px 0px rgba(65, 75, 86, 0.1215686275);
+  transition: 0.2s cubic-bezier(0.25, 0, 0.35, 0.95);
+  position: absolute;
+  top: 1px;
+  left: 0px;
+  will-change: transform;
 }
 .menseyeglasses .eyefilter .filterall .filtercoll .filtercoll2 .filter .filterbtn .btn1 .btnall .btntext {
   display: flex;
@@ -1644,6 +1678,77 @@ main section .basketsec .basketsec2 .basketbtm .basketbtm2 .basketbtm3 div p:fir
 }
 .menseyeglasses .eyefilter .filterall3 {
   margin: 0px auto;
+}
+.menseyeglasses .eyefilter .eyeglassessearch {
+  pointer-events: auto;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  inset: 0px;
+  z-index: 3;
+  transition: 1s;
+}
+.menseyeglasses .eyefilter .eyeglassessearch .hdrsearch-in2 {
+  opacity: 1;
+  pointer-events: auto;
+  position: fixed;
+  inset: 0px;
+  overflow: hidden auto;
+  z-index: 2;
+}
+.menseyeglasses .eyefilter .eyeglassessearch .hdrsearch-in2 .hdrsearch-in3 {
+  margin: 0px auto;
+  width: 100%;
+}
+.menseyeglasses .eyefilter .eyeglassessearch .hdrsearch-in2 .hdrsearch-in3 .hdrsearch-in4 {
+  place-items: stretch;
+  display: grid;
+}
+.menseyeglasses .eyefilter .eyeglassessearch .hdrsearch-in2 .hdrsearch-in3 .hdrsearch-in4 .hdrsearch-in5 .hdrsearch-in6 {
+  position: relative;
+}
+.menseyeglasses .eyefilter .eyeglassessearch .hdrsearch-in2 .hdrsearch-in3 .hdrsearch-in4 .hdrsearch-in5 .hdrsearch-in6 .in6search {
+  padding-top: 60px;
+}
+.menseyeglasses .eyefilter .eyeglassessearch .hdrsearch-in2 .hdrsearch-in3 .hdrsearch-in4 .hdrsearch-in5 .hdrsearch-in6 .in6search .in6search2 {
+  text-align: left;
+}
+.menseyeglasses .eyefilter .eyeglassessearch .hdrsearch-in2 .hdrsearch-in3 .hdrsearch-in4 .hdrsearch-in5 .hdrsearch-in6 .in6search .in6search2 .in6search3 {
+  color: rgb(103, 111, 120);
+}
+.menseyeglasses .eyefilter .eyeglassessearch .hdrsearch-in2 .hdrsearch-in3 .hdrsearch-in4 .hdrsearch-in5 .hdrsearch-in6 .in6search .in6search2 .in6search3 p {
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+.menseyeglasses .eyefilter .eyeglassessearch .hdrsearch-in2 .hdrsearch-in3 .hdrsearch-in4 .hdrsearch-in5 .hdrsearch-in6 .in6search input {
+  font-family: fairfontregular;
+  color: rgb(65, 75, 86);
+  border: none;
+  background: none;
+  padding: 0px;
+  width: 100%;
+  outline: none;
+}
+.menseyeglasses .eyefilter .eyeglassessearch .hdrsearch-in2 .hdrsearch-in3 .hdrsearch-in4 .hdrsearch-in5 .hdrsearch-in6 .in6button {
+  top: 24px;
+  position: absolute;
+  right: 0px;
+  display: inline-flex;
+  padding: 0px;
+  background: none;
+  border: none;
+  outline: none;
+}
+.menseyeglasses .eyefilter .eyeglassessearch .hdrsearch-in2 .hdrsearch-in3 .hdrsearch-in4 .hdrsearch-in5 .hdrsearch-in6 .in6borderbtm {
+  padding: 16px 0px;
+  width: 100vw;
+  position: relative;
+  margin-left: -50vw;
+  left: 50%;
+}
+.menseyeglasses .eyefilter .eyeglassessearch .hdrsearch-in2 .hdrsearch-in3 .hdrsearch-in4 .hdrsearch-in5 .hdrsearch-in6 .in6borderbtm .in4borderbtm2 {
+  background-color: rgb(225, 229, 230);
+  height: 1px;
+  width: 100%;
 }
 .menseyeglasses .eyedata .dataall {
   position: relative;
@@ -1781,11 +1886,18 @@ main section .basketsec .basketsec2 .basketbtm .basketbtm2 .basketbtm3 div p:fir
   justify-content: start;
   width: 100%;
 }
+.menseyeglasses .eyedata .dataall .data2 .shopdata1 .shopdatacoll .datacoll .productall .product .product1 .prd1 .prd2 .prdcolor .colorimg .colorimg1 .colorimg2 :hover {
+  box-shadow: none;
+}
 .menseyeglasses .eyedata .dataall .data2 .shopdata1 .shopdatacoll .datacoll .productall .product .product1 .prd1 .prd2 .prdcolor .colorimg .colorimg1 .colorimg2 div {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+}
+.menseyeglasses .eyedata .dataall .data2 .shopdata1 .shopdatacoll .datacoll .productall .product .product1 .prd1 .prd2 .prdcolor .colorimg .colorimg1 .colorimg2 div :hover {
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(161, 164, 166) 0px 0px 0px 3px;
+  outline: none;
 }
 .menseyeglasses .eyedata .dataall .data2 .shopdata1 .shopdatacoll .datacoll .productall .product .product1 .prd1 .prd2 .prdcolor .colorimg .colorimg1 .colorimg2 div button {
   position: relative;
@@ -1799,10 +1911,6 @@ main section .basketsec .basketsec2 .basketbtm .basketbtm2 .basketbtm3 div p:fir
   transition: box-shadow 0.2s cubic-bezier(0.25, 0, 0.35, 0.95);
   box-shadow: transparent 0px 0px 0px 2px, transparent 0px 0px 0px 3px;
   cursor: pointer;
-}
-.menseyeglasses .eyedata .dataall .data2 .shopdata1 .shopdatacoll .datacoll .productall .product .product1 .prd1 .prd2 .prdcolor .colorimg .colorimg1 .colorimg2 div button :hover {
-  box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(161, 164, 166) 0px 0px 0px 3px;
-  outline: none;
 }
 .menseyeglasses .eyedata .dataall .data2 .shopdata1 .shopdatacoll .datacoll .productall .product .product1 .prd1 .prd2 .prdcolor .colorimg .colorimg1 .colorimg2 div button label {
   border: 0px;
@@ -2939,30 +3047,19 @@ main section .basketsec .basketsec2 .basketbtm .basketbtm2 .basketbtm3 div p:fir
     gap: 12px;
   }
   .menseyeglasses .eyefilter .filterall .filtercoll .filtercoll2 .filter .filterbtn .btn1 .btnall .btnbutton button {
-    width: 32px;
-    height: 18px;
-    padding: 0px;
     background-color: rgb(225, 229, 230);
-    border-radius: 100px;
-    position: relative;
-    border: none;
-    transition: 0.2s cubic-bezier(0.25, 0, 0.35, 0.95);
-    will-change: color;
-    outline-offset: 2px;
   }
   .menseyeglasses .eyefilter .filterall .filtercoll .filtercoll2 .filter .filterbtn .btn1 .btnall .btnbutton button span {
-    display: block;
-    width: 16px;
-    height: 16px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 100px;
-    box-shadow: 0px 0px 4px 0px rgba(65, 75, 86, 0.1215686275);
-    transition: 0.2s cubic-bezier(0.25, 0, 0.35, 0.95);
-    position: absolute;
-    top: 1px;
-    left: 0px;
     transform: translateX(1px);
-    will-change: transform;
+  }
+  .menseyeglasses .eyefilter .filterall .filtercoll .filtercoll2 .filter .filterbtn .btn1 .btnall .btnbutton2 {
+    gap: 12px;
+  }
+  .menseyeglasses .eyefilter .filterall .filtercoll .filtercoll2 .filter .filterbtn .btn1 .btnall .btnbutton2 button {
+    background-color: rgb(0, 110, 165);
+  }
+  .menseyeglasses .eyefilter .filterall .filtercoll .filtercoll2 .filter .filterbtn .btn1 .btnall .btnbutton2 button span {
+    transform: translateX(calc(100% - 1px));
   }
   .menseyeglasses .eyefilter .filterall .filtercoll .filtercoll2 .filter .filterbtn .btn1 .btnall .btntext {
     gap: 12px;
@@ -3020,7 +3117,7 @@ main section .basketsec .basketsec2 .basketbtm .basketbtm2 .basketbtm3 div p:fir
   .menseyeglasses .eyefilter .filterall .filtercoll .filtercoll2 .filter .filtersearch .search button div {
     padding-right: 8px;
   }
-  .menseyeglasses .eyefilter .filterall .filtercoll .filtercoll2 .filter .filtersearch .search button span {
+  .menseyeglasses .eyefilter .filterall .filtercoll .filtercoll2 .filter .filtersearch .search button div span {
     font-size: 14px;
     line-height: 20px;
   }
@@ -3115,6 +3212,9 @@ main section .basketsec .basketsec2 .basketbtm .basketbtm2 .basketbtm3 div p:fir
     padding: 0px;
     position: relative;
   }
+  .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center3 .centertype fieldset :hover, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center4 .centertype fieldset :hover, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center5 .centertype fieldset :hover, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center6 .centertype fieldset :hover, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center7 .centertype fieldset :hover, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center8 .centertype fieldset :hover, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center9 .centertype fieldset :hover, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center10 .centertype fieldset :hover {
+    border: 1px solid rgb(178, 176, 176);
+  }
   .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center3 .centertype fieldset input, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center4 .centertype fieldset input, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center5 .centertype fieldset input, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center6 .centertype fieldset input, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center7 .centertype fieldset input, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center8 .centertype fieldset input, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center9 .centertype fieldset input, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center10 .centertype fieldset input {
     padding: 0;
     height: 0px;
@@ -3135,6 +3235,9 @@ main section .basketsec .basketsec2 .basketbtm .basketbtm2 .basketbtm3 div p:fir
     align-items: center;
     cursor: pointer;
   }
+  .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center3 .centertype fieldset label :hover, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center4 .centertype fieldset label :hover, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center5 .centertype fieldset label :hover, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center6 .centertype fieldset label :hover, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center7 .centertype fieldset label :hover, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center8 .centertype fieldset label :hover, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center9 .centertype fieldset label :hover, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center10 .centertype fieldset label :hover {
+    border: none;
+  }
   .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center3 .centertype fieldset label div span, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center4 .centertype fieldset label div span, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center5 .centertype fieldset label div span, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center6 .centertype fieldset label div span, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center7 .centertype fieldset label div span, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center8 .centertype fieldset label div span, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center9 .centertype fieldset label div span, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center10 .centertype fieldset label div span {
     font-size: 14px;
     font-weight: 600;
@@ -3150,7 +3253,6 @@ main section .basketsec .basketsec2 .basketbtm .basketbtm2 .basketbtm3 div p:fir
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
     padding: 24px 16px;
     width: 100%;
   }
@@ -3163,8 +3265,6 @@ main section .basketsec .basketsec2 .basketbtm .basketbtm2 .basketbtm3 div p:fir
     align-items: center;
     justify-content: space-between;
     padding: 0px 0px 0px 32px;
-    gap: 12px;
-    width: 100%;
   }
   .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center3 .centertype fieldset label .metal div, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center4 .centertype fieldset label .metal div, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center5 .centertype fieldset label .metal div, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center6 .centertype fieldset label .metal div, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center7 .centertype fieldset label .metal div, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center8 .centertype fieldset label .metal div, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center9 .centertype fieldset label .metal div, .menseyeglasses .eyefilter .filterall3 .filter2 .filterwebcoll .filterweball .filtercenter .center10 .centertype fieldset label .metal div {
     width: 100%;
@@ -3276,6 +3376,37 @@ main section .basketsec .basketsec2 .basketbtm .basketbtm2 .basketbtm3 div p:fir
     height: 20px;
     background-color: rgb(225, 229, 230);
     margin: 0px 20px;
+  }
+  .menseyeglasses .eyefilter .eyeglassessearch .hdrsearch-in2 .hdrsearch-in3 .hdrsearch-in4 {
+    -moz-column-gap: 24px;
+         column-gap: 24px;
+    grid-template-columns: repeat(12, 1fr);
+    margin: 0px 48px;
+  }
+  .menseyeglasses .eyefilter .eyeglassessearch .hdrsearch-in2 .hdrsearch-in3 .hdrsearch-in4 .hdrsearch-in5 {
+    grid-column: 1/13;
+  }
+  .menseyeglasses .eyefilter .eyeglassessearch .hdrsearch-in2 .hdrsearch-in3 .hdrsearch-in4 .hdrsearch-in5 .hdrsearch-in6 .in6search {
+    padding-top: 60px;
+  }
+  .menseyeglasses .eyefilter .eyeglassessearch .hdrsearch-in2 .hdrsearch-in3 .hdrsearch-in4 .hdrsearch-in5 .hdrsearch-in6 .in6search .in6search2 {
+    text-align: left;
+  }
+  .menseyeglasses .eyefilter .eyeglassessearch .hdrsearch-in2 .hdrsearch-in3 .hdrsearch-in4 .hdrsearch-in5 .hdrsearch-in6 .in6search .in6search2 .in6search3 p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .menseyeglasses .eyefilter .eyeglassessearch .hdrsearch-in2 .hdrsearch-in3 .hdrsearch-in4 .hdrsearch-in5 .hdrsearch-in6 .in6search .in6search2 .in6search3 .hdrsearch-in4 .hdrsearch-in5 {
+    grid-column: 1/13;
+  }
+  .menseyeglasses .eyefilter .eyeglassessearch .hdrsearch-in2 .hdrsearch-in3 .hdrsearch-in4 .hdrsearch-in5 .hdrsearch-in6 .in6search .in6search2 .in6search3 .hdrsearch-in4 .hdrsearch-in5 .hdrsearch-in6 {
+    position: relative;
+  }
+  .menseyeglasses .eyefilter .eyeglassessearch .hdrsearch-in2 .hdrsearch-in3 .hdrsearch-in4 .hdrsearch-in5 .hdrsearch-in6 .in6search input {
+    font-size: 55px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    line-height: 61px;
   }
   .menseyeglasses .eyedata {
     padding: 0;
@@ -4388,30 +4519,19 @@ main section .basketsec .basketsec2 .basketbtm .basketbtm2 .basketbtm3 div p:fir
     gap: 12px;
   }
   .menseyeglasses .eyefilter .filterall .filtercoll .filtercoll2 .filter .filterbtn .btn1 .btnall .btnbutton button {
-    width: 32px;
-    height: 18px;
-    padding: 0px;
-    background-color: 225 229 230 1;
-    border-radius: 100px;
-    position: relative;
-    border: none;
-    transition: 0.2s cubic-bezier(0.25, 0, 0.35, 0.95);
-    will-change: color;
-    outline-offset: 2px;
+    background-color: rgb(225, 229, 230);
   }
   .menseyeglasses .eyefilter .filterall .filtercoll .filtercoll2 .filter .filterbtn .btn1 .btnall .btnbutton button span {
-    display: block;
-    width: 16px;
-    height: 16px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 100px;
-    box-shadow: 0px 0px 4px 0px rgba(65, 75, 86, 0.1215686275);
-    transition: 0.2s cubic-bezier(0.25, 0, 0.35, 0.95);
-    position: absolute;
-    top: 1px;
-    left: 0px;
     transform: translateX(1px);
-    will-change: transform;
+  }
+  .menseyeglasses .eyefilter .filterall .filtercoll .filtercoll2 .filter .filterbtn .btn1 .btnall .btnbutton2 {
+    gap: 12px;
+  }
+  .menseyeglasses .eyefilter .filterall .filtercoll .filtercoll2 .filter .filterbtn .btn1 .btnall .btnbutton2 button {
+    background-color: rgb(0, 110, 165);
+  }
+  .menseyeglasses .eyefilter .filterall .filtercoll .filtercoll2 .filter .filterbtn .btn1 .btnall .btnbutton2 button span {
+    transform: translateX(calc(100% - 1px));
   }
   .menseyeglasses .eyefilter .filterall .filtercoll .filtercoll2 .filter .filterbtn .btn1 .btnall .btntext {
     gap: 12px;
@@ -5841,30 +5961,21 @@ main section .basketsec .basketsec2 .basketbtm .basketbtm2 .basketbtm3 div p:fir
     gap: 12px;
   }
   .menseyeglasses .eyefilter .filterall .filtercoll .filtercoll2 .filter .filterbtn .btn2 .btnall .btnbutton button {
-    width: 32px;
-    height: 18px;
-    padding: 0px;
-    background-color: 225 229 230 1;
-    border-radius: 100px;
-    position: relative;
-    border: none;
-    transition: 0.2s cubic-bezier(0.25, 0, 0.35, 0.95);
-    will-change: color;
-    outline-offset: 2px;
+    background-color: rgb(225, 229, 230);
   }
   .menseyeglasses .eyefilter .filterall .filtercoll .filtercoll2 .filter .filterbtn .btn2 .btnall .btnbutton button span {
-    display: block;
-    width: 16px;
-    height: 16px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 100px;
-    box-shadow: 0px 0px 4px 0px rgba(65, 75, 86, 0.1215686275);
-    transition: 0.2s cubic-bezier(0.25, 0, 0.35, 0.95);
-    position: absolute;
-    top: 1px;
-    left: 0px;
     transform: translateX(1px);
-    will-change: transform;
+  }
+  .menseyeglasses .eyefilter .filterall .filtercoll .filtercoll2 .filter .filterbtn .btn2 .btnall .btnbutton2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .menseyeglasses .eyefilter .filterall .filtercoll .filtercoll2 .filter .filterbtn .btn2 .btnall .btnbutton2 button {
+    background-color: rgb(0, 110, 165);
+  }
+  .menseyeglasses .eyefilter .filterall .filtercoll .filtercoll2 .filter .filterbtn .btn2 .btnall .btnbutton2 button span {
+    transform: translateX(calc(100% - 1px));
   }
   .menseyeglasses .eyefilter .filterall .filtercoll .filtercoll2 .filter .filterbtn .btn2 .btnall .btntext {
     gap: 12px;

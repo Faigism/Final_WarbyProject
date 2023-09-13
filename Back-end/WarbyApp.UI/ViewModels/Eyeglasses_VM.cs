@@ -1,4 +1,6 @@
-﻿namespace WarbyApp.UI.ViewModels
+﻿using WarbyApp.Core.Entities;
+
+namespace WarbyApp.UI.ViewModels
 {
     public class Eyeglasses_VM
     {
@@ -13,6 +15,6 @@
         public decimal SalePrice { get; set; }
         public decimal DiscountPercent { get; set; }
         public string ImageUrl { get; set; }
-        public string ColorName { get; set; }
+        public List<EyeglassesColor> Colors { get; set; }
     }
 }

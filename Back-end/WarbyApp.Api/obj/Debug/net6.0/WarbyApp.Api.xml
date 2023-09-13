@@ -4,6 +4,173 @@
         <name>WarbyApp.Api</name>
     </assembly>
     <members>
+        <member name="M:WarbyApp.Api.Controllers.ColorsController.Create(WarbyApp.Service.Dtos.ColorDtos.ColorCreateDto)">
+            <summary>
+            Creates a new color.
+            </summary>
+            <remarks>
+            This API method is used to create a new color with the specified name and image.
+            
+            1. Create an HTTP POST request and send it to api/colors.
+            
+            2. Ensure that the request is configured as "multipart/form-data."
+            
+            3. In the request body, provide the following parameters:
+               - ColorName (string): Name of the color.
+               - ColorImage (file): Color image (File upload)
+               
+            4. After sending the request, you will receive a response indicating that the color was successfully created.
+            
+            Sample Request:
+            
+            POST api/colors
+            
+            Form Parameters:
+            - "ColorName": "Red",
+            - "ColorImage": [Color image file]
+            
+            Response:
+            HTTP 201 Created
+            The color was successfully created.
+            </remarks>
+            <param name="createDto"></param>
+            <returns></returns>
+            <response code="201">The Color has been successfully created.</response>
+            <response code="400">Invalid request data.</response>
+            <response code="404">No source found.</response>
+        </member>
+        <member name="M:WarbyApp.Api.Controllers.ColorsController.Edit(System.Int32,WarbyApp.Service.Dtos.ColorDtos.ColorEditDto)">
+            <summary>
+            Organizes a specific color.
+            </summary>
+            <remarks>
+            This API method is used to edit a specific color. Follow the steps below to make a successful request:
+            
+            1. Create an HTTP POST request and send it to api/colors/{id} (id is the ID of the color you want to edit).
+            
+            2. Ensure that the request is configured as "multipart/form-data."
+            
+            3. In the request body, provide the following parameters:
+               - ColorName (string): Name of the color.
+               - ColorImage (file): Color image (File upload)
+               
+            4. After sending the request, you will receive a response containing the created color.
+            
+            Sample Request:
+            
+            POST api/colors/id
+            
+            Form Parameters:
+            - "ColorName": "Red",
+            - "ColorImage": [Color image file]
+            
+            Response:
+            HTTP 201 Created
+            The color was successfully edited..
+            </remarks>
+            <param name="id">Identity of the color to be issued</param>
+            <param name="editDto">Color regulation data</param>
+            <returns></returns>
+            <response code="204">The color was successfully edited.</response>
+            <response code="400">Invalid request data.</response>
+            <response code="404">No source found.</response>
+        </member>
+        <member name="M:WarbyApp.Api.Controllers.ColorsController.Get(System.Int32)">
+            <summary>
+            Retrieves information about a specific color.
+            </summary>
+            <remarks>
+            This API method is used to retrieve details about a specific color by its ID.
+            
+            1. Create an HTTP GET request and send it to api/colors/{id} (id is the ID of the color you want to retrieve).
+            
+            2.  After sending the request, you will receive a response containing the details of the color.
+            
+            Sample Request:
+            
+            GET api/sunglasses/{id}
+            
+            Form Parameters:
+            - "ColorName": Red,
+            - "ColorImage": "https://example.com/images/color1.jpg",
+            
+            Response:
+            HTTP 200 OK
+            
+            The color was successfully edited..
+            </remarks>
+            <param name="id">Identity of the color to retrieve</param>
+            <returns>The details of the color</returns>
+            <response code="200">The color details were successfully retrieved.</response>
+            <response code="404">No color found with the specified ID.</response>
+        </member>
+        <member name="M:WarbyApp.Api.Controllers.ColorsController.GetAll">
+            <summary>
+            Retrieves a list of all colors.
+            </summary>
+            <remarks>
+            This API method is used to retrieve a list of all available colors.
+            
+            1.  Create an HTTP GET request and send it to api/colors/all.
+            
+            2.  After sending the request, you will receive a response containing a list of colors.
+            
+            Sample Request:
+            
+            GET api/colors/all
+            
+            Form Parameters:
+            - "Id": 1,
+            - "ColorName": Red,
+            - "ColorImage": "https://example.com/images/color1.jpg"
+            
+            - "Id": 2,
+            - "ColorName": Black,
+            - "ColorImage": "https://example.com/images/color2.jpg"
+            
+            - "Id": 3,
+            - "ColorName": White,
+            - "ColorImage": "https://example.com/images/color3.jpg"
+            
+            Response:
+            HTTP 200 OK
+            The list of Colors was successfully retrieved.
+            </remarks>
+            <returns>A list of colors</returns>
+            <response code="200">The list of colors was successfully retrieved.</response>
+            <response code="404">No colors found.</response>
+        </member>
+        <member name="M:WarbyApp.Api.Controllers.ColorsController.Delete(System.Int32)">
+            <summary>
+            Deletes an color by its ID.
+            </summary>
+            <remarks>
+            This API method is used to delete a specific color by providing its unique ID.
+            
+            1. Create an HTTP DELETE request and send it to api/colors/{id} (id is the ID of the color to be deleted).
+            
+            2. After sending the request, the specified color will be deleted from the system.
+            
+            Sample Request:
+            
+            DELETE api/colors/id
+            
+            Response:
+            HTTP 204 No Content
+            The color was successfully deleted.
+            </remarks>
+            <param name="id">Identity of the color to be deleted</param>
+            <returns></returns>
+            <response code="204">The color was successfully deleted.</response>
+            <response code="404">No color found for the provided ID.</response>
+        </member>
+        <member name="M:WarbyApp.Api.Controllers.ColorsController.GetAll(System.Int32)">
+            <summary>
+            Fetches all items by paging.
+            </summary>
+            <param name="page">Page number (default: 1).</param>
+            <returns>List of items on the specified page number.</returns>
+        </member>
         <member name="M:WarbyApp.Api.Controllers.EyeglassesController.Create(WarbyApp.Service.Dtos.EyeglassesDtos.EyeglassesCreateDto)">
             <summary>
             Creates a new eyeglasses product.
@@ -11,7 +178,7 @@
             <remarks>
             This API method is used to create a new eyeglasses product. Follow the steps below to make a successful request:
             
-            1. Create an HTTP POST request and send it to the api/brands endpoint.
+            1. Create an HTTP POST request and send it to the api/eyeglasses endpoint.
             
             2. Ensure that the request is configured as "multipart/form-data."
             
@@ -30,12 +197,13 @@
             POST api/brands
             
             Form Parameters:
-            - Name: "Stylish Sunglasses"
+            - Name: "Stylish Eyeglasses"
             - Material: "Acrylic"
             - CostPrice: 30.99
             - SalePrice: 59.99
             - DiscountPercent: 20.0
             - Image: [Eyeglasses image file]
+            - ColorId: 1
             
             Response:
             HTTP 201 Created
@@ -43,18 +211,18 @@
             </remarks>
             <param name="createDto"></param>
             <returns></returns>
-            <response code="201">The eyewear product has been successfully created.</response>
+            <response code="201">The eyeglasses product has been successfully created.</response>
             <response code="400">Invalid request data.</response>
             <response code="404">No source found.</response>
         </member>
         <member name="M:WarbyApp.Api.Controllers.EyeglassesController.Edit(System.Int32,WarbyApp.Service.Dtos.EyeglassesDtos.EyeglassesEditDto)">
             <summary>
-            Organizes a specific eyewear product.
+            Organizes a specific eyeglasses product.
             </summary>
             <remarks>
-            This API method is used to edit a specific eyewear product. Follow the steps below to make a successful request:
+            This API method is used to edit a specific eyeglasses product. Follow the steps below to make a successful request:
             
-            1. Create an HTTP POST request and send it to api/eyeglasses/{id} (id is the ID of the eyewear product you want to edit).
+            1. Create an HTTP POST request and send it to api/eyeglasses/{id} (id is the ID of the eyeglasses product you want to edit).
             
             2. Ensure that the request is configured as "multipart/form-data."
             
@@ -73,23 +241,359 @@
             POST api/eyeglasses/{id}
             
             Form Parameters:
-            - Name: "Stylish Sunglasses"
-            - Material: "Acrylic"
-            - CostPrice: 30.99
-            - SalePrice: 59.99
-            - DiscountPercent: 20.0
-            - Image: [Eyeglasses image file]
+            - "Name": "Stylish Eyeglasses"
+            - "Material": "Acrylic"
+            - "CostPrice": 30.99
+            - "SalePrice": 59.99
+            - "DiscountPercent: 20.0
+            - "Image": [Eyeglasses image file]
+            - "ColorIdsToAdd": 1
+            - "ColorIdsToRemove": 2
             
             Response:
             HTTP 200 OK
             The eyeglasses product was successfully edited..
             </remarks>
-            <param name="id">Identity of the eyewear product to be issued</param>
+            <param name="id">Identity of the eyeglasses product to be issued</param>
             <param name="editDto">Eyeglasses regulation data</param>
             <returns></returns>
-            <response code="200">The eyeglasses product was successfully edited.</response>
+            <response code="204">The eyeglasses product was successfully edited.</response>
             <response code="400">Invalid request data.</response>
             <response code="404">No source found.</response>
+        </member>
+        <member name="M:WarbyApp.Api.Controllers.EyeglassesController.Get(System.Int32)">
+            <summary>
+            Retrieves information about a specific eyeglasses product.
+            </summary>
+            <remarks>
+            This API method is used to retrieve details about a specific eyeglasses product by its ID.
+            
+            1. Create an HTTP GET request and send it to api/eyeglasses/{id} (id is the ID of the eyeglasses product you want to retrieve).
+            
+            2.  After sending the request, you will receive a response containing the details of the eyeglasses product.
+            
+            Sample Request:
+            
+            GET api/eyeglasses/{id}
+            
+            Form Parameters:
+            - "Id": 1,
+            - "Name": "Stylish Eyeglasses",
+            - "Material": "Acrylic",
+            - "CostPrice": 30.99,
+            - "SalePrice": 59.99,
+            - "DiscountPercent": 20.0,
+            - "ImageUrl": "https://example.com/images/eyeglasses1.jpg",
+            - "Colors":
+              - "ColorId": 1,
+              - "Color": 
+                - "ColorName": "Black",
+                - "ColorImage": "https://example.com/images/black_color.jpg"
+            Response:
+            HTTP 200 OK
+            
+            The eyeglasses product was successfully edited..
+            </remarks>
+            <param name="id">Identity of the eyeglasses product to retrieve</param>
+            <returns>The details of the eyeglasses product</returns>
+            <response code="200">The eyeglasses product details were successfully retrieved.</response>
+            <response code="404">No eyeglasses product found with the specified ID.</response>
+        </member>
+        <member name="M:WarbyApp.Api.Controllers.EyeglassesController.GetAll">
+            <summary>
+            Retrieves a list of all eyeglasses products.
+            </summary>
+            <remarks>
+            This API method is used to retrieve a list of all available eyeglasses products.
+            
+            1.  Create an HTTP GET request and send it to api/eyeglasses/all.
+            
+            2.  After sending the request, you will receive a response containing a list of eyeglasses products.
+            
+            Sample Request:
+            
+            GET api/eyeglasses/all
+            
+            Form Parameters:
+            - "Id": 1,
+            - "Name": "Stylish Eyeglasses1",
+            - "Material": "Acrylic1",
+            - "CostPrice": 30.99,
+            - "SalePrice": 59.99,
+            - "DiscountPercent": 20.0,
+            - "ImageUrl": "https://example.com/images/eyeglasses1.jpg",
+            - "Colors": 
+              - "ColorId": 1,
+              - "Color": 
+                - "ColorName": "Black",
+                - "ColorImage": "https://example.com/images/black_color1.jpg"
+              - "ColorId": 2,
+              - "Color": 
+                - "ColorName": "Red",
+                - "ColorImage": "https://example.com/images/black_color2.jpg"
+            - "Id": 2,
+            - "Name": "Stylish Eyeglasses2",
+            - "Material": "Acrylic2",
+            - "CostPrice": 30.99,
+            - "SalePrice": 59.99,
+            - "DiscountPercent": 20.0,
+            - "ImageUrl": "https://example.com/images/eyeglasses1.jpg",
+            - "Colors": 
+              - "ColorId": 3,
+              - "Color": 
+                - "ColorName": "White",
+                - "ColorImage": "https://example.com/images/black_color1.jpg"
+            
+            Response:
+            HTTP 200 OK
+            The list of Eyeglasses products was successfully retrieved.
+            </remarks>
+            <returns>A list of eyeglasses products</returns>
+            <response code="200">The list of eyeglasses products was successfully retrieved.</response>
+            <response code="404">No eyeglasses products found.</response>
+        </member>
+        <member name="M:WarbyApp.Api.Controllers.EyeglassesController.Delete(System.Int32)">
+            <summary>
+            Deletes an eyeglasses product by its ID.
+            </summary>
+            <remarks>
+            This API method is used to delete a specific eyeglasses product by providing its unique ID.
+            
+            1. Create an HTTP DELETE request and send it to api/eyeglasses/{id} (id is the ID of the eyeglasses product to be deleted).
+            
+            2. After sending the request, the specified eyeglasses product will be deleted from the system.
+            
+            Sample Request:
+            
+            DELETE api/eyeglasses/id
+            
+            Response:
+            HTTP 204 No Content
+            The eyeglasses product was successfully deleted.
+            </remarks>
+            <param name="id">Identity of the eyeglasses product to be deleted</param>
+            <returns></returns>
+            <response code="204">The eyeglasses product was successfully deleted.</response>
+            <response code="404">No eyeglasses product found for the provided ID.</response>
+        </member>
+        <member name="M:WarbyApp.Api.Controllers.EyeglassesController.GetAll(System.Int32)">
+            <summary>
+            Fetches all items by paging.
+            </summary>
+            <param name="page">Page number (default: 1).</param>
+            <returns>List of items on the specified page number.</returns>
+        </member>
+        <member name="M:WarbyApp.Api.Controllers.SunglassesController.Create(WarbyApp.Service.Dtos.SunglassesDtos.SunglassesCreateDto)">
+            <summary>
+            Creates a new sunglasses product.
+            </summary>
+            <remarks>
+            This API method is used to create a new sunglasses product. Follow the steps below to make a successful request:
+            
+            1. Create an HTTP POST request and send it to the api/sunglasses endpoint.
+            
+            2. Ensure that the request is configured as "multipart/form-data."
+            
+            3. Add the following form parameters to the request body:
+               - Name (string): Sunglasses name
+               - Material (string): Sunglasses material
+               - CostPrice (decimal): Cost price of the sunglasses
+               - SalePrice (decimal): Selling price of the sunglasses
+               - DiscountPercent (decimal): Discount percentage
+               - Image (file): Sunglasses image (File upload)
+            
+            4. After sending the request, you will receive a response containing the created sunglasses product.
+            
+            Sample Request:
+            
+            POST api/sunglasses
+            
+            Form Parameters:
+            - Name: "Stylish Sunglasses"
+            - Material: "Acrylic"
+            - CostPrice: 30.99
+            - SalePrice: 59.99
+            - DiscountPercent: 20.0
+            - Image: [Sunglasses image file]
+            - ColorId: 1
+            
+            Response:
+            HTTP 201 Created
+            Sunglasses product successfully created.
+            </remarks>
+            <param name="createDto"></param>
+            <returns></returns>
+            <response code="201">The sunglasses product has been successfully created.</response>
+            <response code="400">Invalid request data.</response>
+            <response code="404">No source found.</response>
+        </member>
+        <member name="M:WarbyApp.Api.Controllers.SunglassesController.Edit(System.Int32,WarbyApp.Service.Dtos.SunglassesDtos.SunglassesEditDto)">
+            <summary>
+            Organizes a specific sunglasses product.
+            </summary>
+            <remarks>
+            This API method is used to edit a specific sunglasses product. Follow the steps below to make a successful request:
+            
+            1. Create an HTTP POST request and send it to api/sunglasses/{id} (id is the ID of the sunglasses product you want to edit).
+            
+            2. Ensure that the request is configured as "multipart/form-data."
+            
+            3. Add the following form parameters to the request body:
+               - Name (string): Sunglasses name
+               - Material (string): Sunglasses material
+               - CostPrice (decimal): Cost price of the sunglasses
+               - SalePrice (decimal): Selling price of the sunglasses
+               - DiscountPercent (decimal): Discount percentage
+               - Image (file): Sunglasses image (File upload)
+            
+            4. After sending the request, you will receive a response containing the created sunglasses product.
+            
+            Sample Request:
+            
+            POST api/sunglasses/{id}
+            
+            Form Parameters:
+            - "Name": "Stylish sunglasses"
+            - "Material": "Acrylic"
+            - "CostPrice": 30.99
+            - "SalePrice": 59.99
+            - "DiscountPercent: 20.0
+            - "Image": [Sunglasses image file]
+            - "ColorIdsToAdd": 1
+            - "ColorIdsToRemove": 2
+            
+            Response:
+            HTTP 200 OK
+            The sunglasses product was successfully edited..
+            </remarks>
+            <param name="id">Identity of the sunglasses product to be issued</param>
+            <param name="editDto">Sunglasses regulation data</param>
+            <returns></returns>
+            <response code="204">The sunglasses product was successfully edited.</response>
+            <response code="400">Invalid request data.</response>
+            <response code="404">No source found.</response>
+        </member>
+        <member name="M:WarbyApp.Api.Controllers.SunglassesController.Get(System.Int32)">
+            <summary>
+            Retrieves information about a specific sunglasses product.
+            </summary>
+            <remarks>
+            This API method is used to retrieve details about a specific sunglasses product by its ID.
+            
+            1. Create an HTTP GET request and send it to api/sunglasses/{id} (id is the ID of the sunglasses product you want to retrieve).
+            
+            2.  After sending the request, you will receive a response containing the details of the sunglasses product.
+            
+            Sample Request:
+            
+            GET api/sunglasses/{id}
+            
+            Form Parameters:
+            - "Id": 1,
+            - "Name": "Stylish sunglasses",
+            - "Material": "Acrylic",
+            - "CostPrice": 30.99,
+            - "SalePrice": 59.99,
+            - "DiscountPercent": 20.0,
+            - "ImageUrl": "https://example.com/images/sunglasses1.jpg",
+            - "Colors":
+              - "ColorId": 1,
+              - "Color": 
+                - "ColorName": "Black",
+                - "ColorImage": "https://example.com/images/black_color.jpg"
+            Response:
+            HTTP 200 OK
+            
+            The sunglasses product was successfully edited..
+            </remarks>
+            <param name="id">Identity of the sunglasses product to retrieve</param>
+            <returns>The details of the sunglasses product</returns>
+            <response code="200">The sunglasses product details were successfully retrieved.</response>
+            <response code="404">No sunglasses product found with the specified ID.</response>
+        </member>
+        <member name="M:WarbyApp.Api.Controllers.SunglassesController.GetAll">
+            <summary>
+            Retrieves a list of all sunglasses products.
+            </summary>
+            <remarks>
+            This API method is used to retrieve a list of all available sunglasses products.
+            
+            1.  Create an HTTP GET request and send it to api/sunglasses/all.
+            
+            2.  After sending the request, you will receive a response containing a list of sunglasses products.
+            
+            Sample Request:
+            
+            GET api/sunglasses/all
+            
+            Form Parameters:
+            - "Id": 1,
+            - "Name": "Stylish sunglasses1",
+            - "Material": "Acrylic1",
+            - "CostPrice": 30.99,
+            - "SalePrice": 59.99,
+            - "DiscountPercent": 20.0,
+            - "ImageUrl": "https://example.com/images/sunglasses1.jpg",
+            - "Colors": 
+              - "ColorId": 1,
+              - "Color": 
+                - "ColorName": "Black",
+                - "ColorImage": "https://example.com/images/black_color1.jpg"
+              - "ColorId": 2,
+              - "Color": 
+                - "ColorName": "Red",
+                - "ColorImage": "https://example.com/images/black_color2.jpg"
+            - "Id": 2,
+            - "Name": "Stylish sunglasses2",
+            - "Material": "Acrylic2",
+            - "CostPrice": 30.99,
+            - "SalePrice": 59.99,
+            - "DiscountPercent": 20.0,
+            - "ImageUrl": "https://example.com/images/sunglasses1.jpg",
+            - "Colors": 
+              - "ColorId": 3,
+              - "Color": 
+                - "ColorName": "White",
+                - "ColorImage": "https://example.com/images/black_color1.jpg"
+            
+            Response:
+            HTTP 200 OK
+            The list of Sunglasses products was successfully retrieved.
+            </remarks>
+            <returns>A list of sunglasses products</returns>
+            <response code="200">The list of sunglasses products was successfully retrieved.</response>
+            <response code="404">No sunglasses products found.</response>
+        </member>
+        <member name="M:WarbyApp.Api.Controllers.SunglassesController.Delete(System.Int32)">
+            <summary>
+            Deletes an sunglasses product by its ID.
+            </summary>
+            <remarks>
+            This API method is used to delete a specific sunglasses product by providing its unique ID.
+            
+            1. Create an HTTP DELETE request and send it to api/sunglasses/{id} (id is the ID of the sunglasses product to be deleted).
+            
+            2. After sending the request, the specified sunglasses product will be deleted from the system.
+            
+            Sample Request:
+            
+            DELETE api/sunglasses/id
+            
+            Response:
+            HTTP 204 No Content
+            The sunglasses product was successfully deleted.
+            </remarks>
+            <param name="id">Identity of the sunglasses product to be deleted</param>
+            <returns></returns>
+            <response code="204">The sunglasses product was successfully deleted.</response>
+            <response code="404">No sunglasses product found for the provided ID.</response>
+        </member>
+        <member name="M:WarbyApp.Api.Controllers.SunglassesController.GetAll(System.Int32)">
+            <summary>
+            Fetches all items by paging.
+            </summary>
+            <param name="page">Page number (default: 1).</param>
+            <returns>List of items on the specified page number.</returns>
         </member>
     </members>
 </doc>

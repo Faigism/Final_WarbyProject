@@ -139,9 +139,33 @@
                                     display: flex;
                                     align-items: center;
                                     cursor: pointer;
-                                    .btnbutton{
+                                    .btnbutton, .btnbutton2{
                                         display: flex;
                                         align-items: center;
+                                        button{
+                                            width: 32px;
+                                            height: 18px;
+                                            padding: 0px;
+                                            border-radius: 100px;
+                                            position: relative;
+                                            border: none;
+                                            transition: 0.2s cubic-bezier(0.25, 0, 0.35, 0.95);
+                                            will-change: color;
+                                            outline-offset: 2px;
+                                            span{
+                                                display: block;
+                                                width: 16px;
+                                                height: 16px;
+                                                background-color: rgba(255, 255, 255, 1);
+                                                border-radius: 100px;
+                                                box-shadow: 0px 0px 4px 0px #414b561f;
+                                                transition: 0.2s cubic-bezier(0.25, 0, 0.35, 0.95);
+                                                position: absolute;
+                                                top: 1px;
+                                                left: 0px;
+                                                will-change: transform;
+                                            }
+                                        }
                                     }
                                     .btntext{
                                         display: flex;
@@ -282,6 +306,79 @@
         .filterall3{
             margin: 0px auto;
         }
+        .eyeglassessearch{
+            pointer-events: auto;
+            background-color: rgba(255, 255, 255, 1);
+            position: fixed;
+            inset: 0px;
+            z-index: 3;
+            transition: 1s;
+            .hdrsearch-in2{
+                opacity: 1;
+                pointer-events: auto;
+                position: fixed;
+                inset: 0px;
+                overflow: hidden auto;
+                z-index: 2;
+                .hdrsearch-in3{
+                    margin: 0px auto;
+                    width: 100%;
+                    .hdrsearch-in4{
+                        place-items: stretch;
+                        display: grid;
+                        .hdrsearch-in5{
+                            .hdrsearch-in6{
+                                position: relative;
+                                .in6search{
+                                    padding-top: 60px;
+                                    .in6search2{
+                                        text-align: left;
+                                        .in6search3{
+                                            color: rgba(103, 111, 120, 1);
+                                            p{
+                                                font-weight: 400;
+                                                letter-spacing: 0px;
+                                            }
+                                        }
+                                    }
+                                    input{
+                                        font-family: fairfontregular;
+                                        color: rgba(65, 75, 86, 1);
+                                        border: none;
+                                        background: none;
+                                        padding: 0px;
+                                        width: 100%;
+                                        outline: none;
+                                    }
+                                }
+                                .in6button{
+                                    top: 24px;
+                                    position: absolute;
+                                    right: 0px;
+                                    display: inline-flex;
+                                    padding: 0px;
+                                    background: none;
+                                    border: none;
+                                    outline: none;
+                                }
+                                .in6borderbtm{
+                                    padding: 16px 0px;
+                                    width: 100vw;
+                                    position: relative;
+                                    margin-left: -50vw;
+                                    left: 50%;
+                                    .in4borderbtm2{
+                                        background-color: rgba(225, 229, 230, 1);
+                                        height: 1px;
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     .eyedata{
         .dataall{
@@ -412,11 +509,18 @@
                                                                 flex-flow: wrap;
                                                                 justify-content: start;
                                                                 width: 100%;
+                                                                :hover{
+                                                                    box-shadow: none;
+                                                                }
                                                                 div{
                                                                     display: flex;
                                                                     justify-content: center;
                                                                     align-items: center;
                                                                     position: relative;
+                                                                    :hover{
+                                                                        box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(161, 164, 166) 0px 0px 0px 3px;
+                                                                        outline: none;
+                                                                    }
                                                                     button{
                                                                         position: relative;
                                                                         background-color: rgba(225, 229, 230, 1);
@@ -427,10 +531,7 @@
                                                                         transition: box-shadow 0.2s cubic-bezier(0.25, 0, 0.35, 0.95);
                                                                         box-shadow: transparent 0px 0px 0px 2px, transparent 0px 0px 0px 3px;
                                                                         cursor: pointer;
-                                                                        :hover{
-                                                                            box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(161, 164, 166) 0px 0px 0px 3px;
-                                                                            outline: none;
-                                                                        }
+                                                                        
                                                                         label{
                                                                             border: 0px;
                                                                             clip: rect(0px, 0px, 0px, 0px);

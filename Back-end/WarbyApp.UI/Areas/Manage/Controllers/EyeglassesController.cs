@@ -1,9 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Net.Http.Headers;
 using Newtonsoft.Json;
 using System.Net;
 using System.Net.Http.Headers;
+using WarbyApp.Core.Entities;
+using WarbyApp.Data;
 using WarbyApp.UI.ViewModels;
 using MediaTypeHeaderValue = System.Net.Http.Headers.MediaTypeHeaderValue;
 
@@ -13,6 +16,7 @@ namespace WarbyApp.UI.Areas.Manage.Controllers
     public class EyeglassesController : Controller
     {
         private HttpClient _client;
+
         public EyeglassesController()
         {
             _client = new HttpClient();
@@ -30,6 +34,8 @@ namespace WarbyApp.UI.Areas.Manage.Controllers
                     var paginatedList = PaginatedList<Eyeglasses_VMItem>.Create(eyeglasses.AsQueryable(), page, pageSize);
                     return View(paginatedList);
                 }
+                else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized || response.StatusCode == System.Net.HttpStatusCode.Forbidden)
+                    return RedirectToAction("login", "account");
             }
             return View("error");
         }
@@ -71,6 +77,8 @@ namespace WarbyApp.UI.Areas.Manage.Controllers
 
                     return View();
                 }
+                else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized || response.StatusCode == System.Net.HttpStatusCode.Forbidden)
+                    return RedirectToAction("login", "account");
             }
             return View("error");
         }
@@ -82,19 +90,34 @@ namespace WarbyApp.UI.Areas.Manage.Controllers
                 {
                     var content = await response.Content.ReadAsStringAsync();
                     var vm = JsonConvert.DeserializeObject<EyeglassesEdit_VM>(content);
+                    var colorNames = vm.Colors.Select(x => x.Color).ToList();
+                    ViewBag.Colors = colorNames;
                     return View(vm);
                 }
+                else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized || response.StatusCode == System.Net.HttpStatusCode.Forbidden)
+                    return RedirectToAction("login", "account");
             }
             return View("Error");
         }
         [HttpPost]
         public async Task<IActionResult> Edit(int id, EyeglassesEdit_VM edit_VM)
         {
-            if (!ModelState.IsValid) return View();
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Colors = _getColors();
+                return View();
+            }
+            foreach (var color in edit_VM.Colors)
+            {
+                if (color.ColorId == edit_VM.Colors.FirstOrDefault().ColorId)
+                {
+                    color.Color.ColorName = edit_VM.Colors.FirstOrDefault().Color.ColorName;
+                }
+            }
             MultipartFormDataContent requestContent = new MultipartFormDataContent();
             requestContent.Add(new StringContent(edit_VM.Name), "Name");
             requestContent.Add(new StringContent(edit_VM.Material), "Material");
-            requestContent.Add(new StringContent(edit_VM.ColorId.ToString()), "ColorId");
+            requestContent.Add(new StringContent(edit_VM.Colors.ToString()), "Colors");
             requestContent.Add(new StringContent(edit_VM.SalePrice.ToString()), "SalePrice");
             requestContent.Add(new StringContent(edit_VM.CostPrice.ToString()), "CostPrice");
             requestContent.Add(new StringContent(edit_VM.DiscountPercent.ToString()), "DiscountPercent");
@@ -115,8 +138,21 @@ namespace WarbyApp.UI.Areas.Manage.Controllers
 
                     return View();
                 }
+                else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized || response.StatusCode == System.Net.HttpStatusCode.Forbidden)
+                    return RedirectToAction("login", "account");
             }
             return View("Error");
+        }
+        public async Task<IActionResult> Delete(int id)
+        {
+            using (var response = await _client.DeleteAsync($"eyeglasses/{id}"))
+            {
+                if (response.IsSuccessStatusCode)
+                    return Ok();
+                else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized || response.StatusCode == System.Net.HttpStatusCode.Forbidden)
+                    return Unauthorized();
+            }
+            return NotFound();
         }
         private async Task<List<Color_VMItem>> _getColors()
         {
